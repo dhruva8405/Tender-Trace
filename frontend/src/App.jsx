@@ -48,8 +48,35 @@ function FraudTicker() {
 }
 
 export default function App() {
-  const [page, setPage] = useState('dashboard');
-  const [selectedVendor, setSelectedVendor] = useState(null);
+  const [page, setPage] = useState(() => {
+    const p = new URLSearchParams(window.location.search).get('page');
+    return p || 'dashboard';
+  });
+  const [selectedVendor, setSelectedVendor] = useState(() => {
+    const vid = new URLSearchParams(window.location.search).get('vendor');
+    if (vid) return DEMO_VENDORS.find(v => v.vendor_id === vid) || null;
+    return null;
+  });
+  const [theme, setTheme] = useState(() => localStorage.getItem('tt-theme') || 'dark');
+
+  useEffect(() => {
+    document.body.classList.toggle('light', theme === 'light');
+    localStorage.setItem('tt-theme', theme);
+  }, [theme]);
+
+  // If vendor was pre-selected via URL, go to search
+  useEffect(() => {
+    if (selectedVendor) setPage('search');
+  }, []);
+
+  const navigate = (newPage, vendor = null) => {
+    setPage(newPage);
+    if (vendor) setSelectedVendor(vendor);
+    const params = new URLSearchParams();
+    params.set('page', newPage);
+    if (vendor) params.set('vendor', vendor.vendor_id);
+    window.history.pushState({}, '', `?${params.toString()}`);
+  };
 
   const NAV = [
     { id: 'dashboard', label: 'Dashboard' },
@@ -71,19 +98,27 @@ export default function App() {
         </div>
         <div className="nav-center">
           {NAV.map(({ id, label }) => (
-            <button key={id} className={`nav-btn ${page === id ? 'active' : ''}`} onClick={() => setPage(id)}>
+            <button key={id} className={`nav-btn ${page === id ? 'active' : ''}`} onClick={() => navigate(id)}>
               {label}
             </button>
           ))}
         </div>
         <div className="nav-right">
+          <button onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} style={{
+            background: 'var(--bg-card)', border: '1px solid var(--border)',
+            borderRadius: 8, padding: '0.3rem 0.75rem',
+            color: 'var(--text-3)', fontSize: '0.78rem', cursor: 'pointer',
+            fontFamily: 'var(--font)', fontWeight: 600,
+          }} title="Toggle dark/light mode">
+            {theme === 'dark' ? 'Light' : 'Dark'}
+          </button>
           <div className="live-pill" title="Connected: Lambda · DynamoDB · S3 · Bedrock · API Gateway"><div className="pulse" />Live · AWS</div>
         </div>
       </nav>
       <FraudTicker />
       <main className="page">
-        {page === 'dashboard' && <Dashboard onSelectVendor={(v) => { setSelectedVendor(v); setPage('search'); }} />}
-        {page === 'search' && <VendorSearch preselected={selectedVendor} />}
+        {page === 'dashboard' && <Dashboard onSelectVendor={(v) => navigate('search', v)} />}
+        {page === 'search' && <VendorSearch preselected={selectedVendor} onNavigate={navigate} />}
         {page === 'analytics' && <Analytics />}
         {page === 'graph' && <GraphView />}
         {page === 'agent' && <AgentChat />}
