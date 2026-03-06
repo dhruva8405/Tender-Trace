@@ -416,6 +416,22 @@ export default function VendorSearch({ preselected }) {
                                 {exportFlash ? 'Downloaded' : 'Export Report (JSON)'}
                             </button>
                             <button onClick={() => {
+                                const shareUrl = `${window.location.origin}?page=search&vendor=${result.vendor_id}`;
+                                navigator.clipboard.writeText(shareUrl).then(() => {
+                                    setExportFlash('link');
+                                    setTimeout(() => setExportFlash(false), 2000);
+                                });
+                            }} style={{
+                                background: exportFlash === 'link' ? 'rgba(99,102,241,0.15)' : 'var(--bg-card-2)',
+                                border: `1px solid ${exportFlash === 'link' ? 'rgba(99,102,241,0.4)' : 'var(--border-2)'}`,
+                                borderRadius: 10, padding: '0.65rem 1.25rem',
+                                color: exportFlash === 'link' ? '#818cf8' : 'var(--text-2)',
+                                fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', fontFamily: 'var(--font)',
+                                display: 'flex', alignItems: 'center', gap: '0.4rem', transition: 'all 0.2s',
+                            }}>
+                                {exportFlash === 'link' ? 'Link Copied!' : 'Copy Share Link'}
+                            </button>
+                            <button onClick={() => {
                                 const url = `mailto:vigilance@health.gov.in?subject=Tender Trace Alert: ${result.vendor_name}&body=Vendor ${result.vendor_id} has been flagged with score ${result.score}/100. Flags: ${result.flags?.join(', ')}. Please initiate investigation.`;
                                 window.open(url);
                             }} style={{
