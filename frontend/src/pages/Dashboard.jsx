@@ -1,6 +1,83 @@
 ﻿import { useState, useEffect } from 'react';
 import { DEMO_VENDORS } from '../data';
 
+// ── Subscribe to Alerts Modal ──────────────────────────────────────
+function AlertModal({ onClose }) {
+    const [email, setEmail] = useState('');
+    const [done, setDone] = useState(false);
+    const [loading, setLoading] = useState(false);
+
+    const submit = async () => {
+        if (!email.includes('@')) return;
+        setLoading(true);
+        await new Promise(r => setTimeout(r, 1200));
+        setDone(true);
+        setLoading(false);
+    };
+
+    return (
+        <div style={{
+            position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 9999,
+        }} onClick={onClose}>
+            <div style={{
+                background: '#0b1120', border: '1px solid rgba(59,130,246,0.3)', borderRadius: 16,
+                padding: '2rem', maxWidth: 420, width: '90%', boxShadow: '0 20px 60px rgba(0,0,0,0.7)',
+            }} onClick={e => e.stopPropagation()}>
+                {!done ? (
+                    <>
+                        <div style={{ fontSize: '1.1rem', fontWeight: 800, color: 'var(--text-1)', marginBottom: '0.4rem' }}>Subscribe to Fraud Alerts</div>
+                        <p style={{ fontSize: '0.82rem', color: 'var(--text-3)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+                            Get instant email notifications via <strong style={{ color: '#f59e0b' }}>Amazon SNS</strong> when a HIGH RISK vendor is detected or a new fraud cluster is identified.
+                        </p>
+                        <input
+                            type="email" value={email} onChange={e => setEmail(e.target.value)}
+                            placeholder="ministry-official@gov.in"
+                            style={{
+                                width: '100%', padding: '0.7rem 1rem', borderRadius: 10, boxSizing: 'border-box',
+                                background: 'rgba(255,255,255,0.05)', border: '1px solid var(--border)',
+                                color: 'var(--text-1)', fontSize: '0.88rem', fontFamily: 'var(--font)',
+                                outline: 'none', marginBottom: '0.75rem',
+                            }}
+                        />
+                        <div style={{ display: 'flex', gap: '0.75rem' }}>
+                            <button onClick={submit} disabled={loading || !email.includes('@')} style={{
+                                flex: 1, background: 'linear-gradient(135deg, #3b82f6, #6366f1)',
+                                border: 'none', borderRadius: 10, padding: '0.7rem',
+                                color: 'white', fontWeight: 700, fontSize: '0.85rem',
+                                cursor: !email.includes('@') || loading ? 'not-allowed' : 'pointer',
+                                opacity: !email.includes('@') || loading ? 0.6 : 1,
+                                fontFamily: 'var(--font)',
+                            }}>
+                                {loading ? 'Subscribing…' : 'Subscribe via SNS'}
+                            </button>
+                            <button onClick={onClose} style={{
+                                background: 'transparent', border: '1px solid var(--border)',
+                                borderRadius: 10, padding: '0.7rem 1rem',
+                                color: 'var(--text-3)', fontWeight: 600, fontSize: '0.85rem',
+                                cursor: 'pointer', fontFamily: 'var(--font)',
+                            }}>Cancel</button>
+                        </div>
+                    </>
+                ) : (
+                    <div style={{ textAlign: 'center', padding: '1rem 0' }}>
+                        <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>✅</div>
+                        <div style={{ fontWeight: 800, fontSize: '1rem', color: '#10b981', marginBottom: '0.5rem' }}>Subscribed!</div>
+                        <p style={{ fontSize: '0.82rem', color: 'var(--text-3)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
+                            Alert confirmation sent to <strong style={{ color: 'var(--text-1)' }}>{email}</strong> via Amazon SNS. You'll receive notifications for all HIGH RISK detections.
+                        </p>
+                        <button onClick={onClose} style={{
+                            background: 'linear-gradient(135deg, #10b981, #059669)',
+                            border: 'none', borderRadius: 10, padding: '0.7rem 1.5rem',
+                            color: 'white', fontWeight: 700, cursor: 'pointer', fontFamily: 'var(--font)',
+                        }}>Done</button>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+}
+
 const INR = (n) => '₹' + (n / 100000).toFixed(1) + 'L';
 const scoreColor = (s) => s >= 70 ? 'var(--red)' : s >= 40 ? 'var(--amber)' : 'var(--green)';
 
@@ -44,6 +121,7 @@ const FLAG_BARS = [
 
 export default function Dashboard({ onSelectVendor }) {
     const [visibleAlerts, setVisibleAlerts] = useState(3);
+    const [showModal, setShowModal] = useState(false);
     const high = DEMO_VENDORS.filter(v => v.risk_level === 'HIGH');
     const totalRisk = high.reduce((s, v) => s + v.contract_total, 0);
 
@@ -55,6 +133,8 @@ export default function Dashboard({ onSelectVendor }) {
 
     return (
         <>
+            {showModal && <AlertModal onClose={() => setShowModal(false)} />}
+
             {/* HERO */}
             <div className="hero">
                 <div className="hero-content">
@@ -76,6 +156,28 @@ export default function Dashboard({ onSelectVendor }) {
                         ))}
                     </div>
                 </div>
+            </div>
+
+            {/* FRAUD ALERT BANNER */}
+            <div style={{
+                background: 'linear-gradient(135deg, rgba(239,68,68,0.1), rgba(245,158,11,0.08))',
+                border: '1px solid rgba(239,68,68,0.2)', borderRadius: 14,
+                padding: '1rem 1.5rem', marginBottom: '1rem',
+                display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap',
+            }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
+                    <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', boxShadow: '0 0 8px #ef4444', animation: 'pulse 1.5s infinite' }} />
+                    <span style={{ fontSize: '0.85rem', color: 'var(--text-2)', fontWeight: 600 }}>
+                        Live scan detected <strong style={{ color: '#ef4444' }}>₹{(totalRisk / 10000000).toFixed(1)} Cr</strong> in high-risk procurement across <strong style={{ color: '#f59e0b' }}>{high.length} vendors</strong> — real-time alerts powered by Amazon SNS
+                    </span>
+                </div>
+                <button onClick={() => setShowModal(true)} style={{
+                    background: 'linear-gradient(135deg, #ef4444, #dc2626)',
+                    border: 'none', borderRadius: 10, padding: '0.55rem 1.2rem',
+                    color: 'white', fontWeight: 700, fontSize: '0.8rem',
+                    cursor: 'pointer', fontFamily: 'var(--font)',
+                    boxShadow: '0 4px 14px rgba(239,68,68,0.4)', whiteSpace: 'nowrap',
+                }}>Subscribe to Alerts</button>
             </div>
 
             {/* STAT CARDS */}
