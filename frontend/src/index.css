@@ -32,6 +32,25 @@
   --radius-sm: 8px;
 }
 
+/* ── LIGHT THEME ─────────────────────────────────────────────────── */
+body.light {
+  --bg: #f1f5f9;
+  --bg-2: #e8edf5;
+  --bg-card: #ffffff;
+  --bg-card-2: #f8fafc;
+  --border: #e2e8f0;
+  --border-2: #cbd5e1;
+  --text-1: #0f172a;
+  --text-2: #334155;
+  --text-3: #64748b;
+  --text-4: #94a3b8;
+  --accent-glow: rgba(59,130,246,0.12);
+  --red-glow: rgba(239,68,68,0.15);
+  --amber-glow: rgba(245,158,11,0.12);
+  --green-glow: rgba(16,185,129,0.12);
+  --purple-glow: rgba(139,92,246,0.12);
+}
+
 *,
 *::before,
 *::after {
