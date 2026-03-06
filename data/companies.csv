@@ -1,0 +1,285 @@
+company_id,name,registered_address,registration_date,paid_up_capital
+C001,Kanpur HealthCare Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-29,500000
+C002,Kanpur Surgical Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-10-31,300000
+C003,Kanpur PharmEquip Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-14,300000
+C004,Kanpur PharmEquip Enterprises Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-03,150000
+C005,Kanpur PharmEquip Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-08,200000
+C006,Kanpur Surgical Corp Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-10-22,300000
+C007,Kanpur Surgical Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-28,150000
+C008,Kanpur PharmEquip Enterprises Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-15,500000
+C009,Kanpur MediServ Enterprises Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-30,500000
+C010,Kanpur HealthCare Corp Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-10,200000
+C011,Kanpur MediServ Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-12-07,200000
+C012,Kanpur BioSurg Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-27,250000
+C013,Kanpur HealthCare Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-12-03,300000
+C014,Kanpur BioSurg Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-10-25,300000
+C015,Kanpur Surgical Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-26,150000
+C016,Kanpur NurseAid Enterprises Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-21,100000
+C017,Kanpur Surgical Enterprises Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-13,150000
+C018,Kanpur HealthCare Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-12-11,500000
+C019,Kanpur HealthCare Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-11-24,200000
+C020,Kanpur ClinTech Solutions Pvt Ltd,"14-A Civil Lines, Kanpur UP 208001",2022-10-20,150000
+C021,Jaipur Bridges Infra Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-13,300000
+C022,Jaipur Works Infra Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-07,150000
+C023,Jaipur Roads Contractors Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-06-30,100000
+C024,Jaipur Projects Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-08-01,150000
+C025,Jaipur Construct Infra Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-15,250000
+C026,Jaipur Civil Builders Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-27,250000
+C027,Jaipur Infra Infra Ltd,"88-C MI Road, Jaipur RJ 302001",2022-08-15,200000
+C028,Jaipur Works Contractors Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-27,150000
+C029,Jaipur Works Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-03,500000
+C030,Jaipur Construct Infra Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-31,250000
+C031,Jaipur Civil Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-24,200000
+C032,Jaipur Works Contractors Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-12,200000
+C033,Jaipur Infra Builders Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-03,100000
+C034,Jaipur Build Contractors Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-04,300000
+C035,Jaipur Roads Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-08-08,100000
+C036,Jaipur Projects Contractors Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-16,250000
+C037,Jaipur Build Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-07-29,300000
+C038,Jaipur Bridges Contractors Pvt Ltd,"88-C MI Road, Jaipur RJ 302001",2022-08-28,200000
+C039,Chennai TechHub Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-27,300000
+C040,Chennai Analytics Solutions Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-23,500000
+C041,Chennai DataSys Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-20,250000
+C042,Chennai DigiSoft Technologies Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-07-21,500000
+C043,Chennai DataSys Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-07-15,500000
+C044,Chennai DigiSoft IT Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-07-19,100000
+C045,Chennai Analytics Solutions Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-23,150000
+C046,Chennai CloudNet Solutions Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-09-08,150000
+C047,Chennai DigiSoft Technologies Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-30,250000
+C048,Chennai CloudNet Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-09-03,250000
+C049,Chennai CodeBase Solutions Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-07-25,100000
+C050,Chennai TechHub Technologies Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-02,500000
+C051,Chennai DataSys Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-09-05,200000
+C052,Chennai TechHub IT Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-02,500000
+C053,Chennai TechHub IT Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-09-06,300000
+C054,Chennai DataSys Solutions Pvt Ltd,"12-D Anna Salai, Chennai TN 600002",2022-08-03,250000
+C055,Patna SchoolMart Enterprises,"7-B Boring Road, Patna BR 800001",2021-12-16,250000
+C056,Patna DeskPro Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-11-23,200000
+C057,Patna FurnSupply Enterprises,"7-B Boring Road, Patna BR 800001",2021-12-02,250000
+C058,Patna EduFurn Traders Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-06,500000
+C059,Patna EduEquip Suppliers Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-25,150000
+C060,Patna BenchMark Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-03,250000
+C061,Patna BenchMark Enterprises,"7-B Boring Road, Patna BR 800001",2021-11-19,150000
+C062,Patna SchoolMart Suppliers Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-25,500000
+C063,Patna EduFurn Enterprises,"7-B Boring Road, Patna BR 800001",2021-11-12,250000
+C064,Patna DeskPro Enterprises,"7-B Boring Road, Patna BR 800001",2021-12-31,150000
+C065,Patna EduEquip Enterprises,"7-B Boring Road, Patna BR 800001",2021-12-14,150000
+C066,Patna SchoolMart Traders Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-11-25,200000
+C067,Patna DeskPro Suppliers Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-19,150000
+C068,Patna BenchMark Enterprises,"7-B Boring Road, Patna BR 800001",2021-11-07,150000
+C069,Patna FurniWorld Enterprises,"7-B Boring Road, Patna BR 800001",2021-12-04,100000
+C070,Patna DeskPro Suppliers Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-05,150000
+C071,Patna DeskPro Traders Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-12-16,500000
+C072,Patna ClassFit Pvt Ltd,"7-B Boring Road, Patna BR 800001",2022-01-01,250000
+C073,Patna ClassFit Enterprises,"7-B Boring Road, Patna BR 800001",2021-11-15,100000
+C074,Patna BenchMark Traders Pvt Ltd,"7-B Boring Road, Patna BR 800001",2021-11-25,250000
+C075,Jharkhand BuildWell Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-09-05,150000
+C076,Jharkhand StructBuild Contractors Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-06,500000
+C077,Jharkhand TribeConst Contractors Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-14,300000
+C078,Jharkhand BuildWell Builders Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-12,500000
+C079,Jharkhand UrbanCon Contractors Ltd,"22-C Main Road, Ranchi JH 834001",2022-07-13,500000
+C080,Jharkhand BuildWell Builders Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-10,250000
+C081,Jharkhand BuildWell Engineers Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-28,250000
+C082,Jharkhand ProjectPro Engineers Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-07-18,500000
+C083,Jharkhand CivicCon Builders Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-30,150000
+C084,Jharkhand InfraTech Engineers Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-07-28,100000
+C085,Jharkhand StructBuild Builders Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-27,200000
+C086,Jharkhand BuildWell Contractors Ltd,"22-C Main Road, Ranchi JH 834001",2022-07-12,150000
+C087,Jharkhand InfraTech Engineers Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-04,100000
+C088,Jharkhand StructBuild Builders Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-18,300000
+C089,Jharkhand TribeConst Engineers Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-23,300000
+C090,Jharkhand CivicCon Builders Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-07-23,150000
+C091,Jharkhand ProjectPro Contractors Ltd,"22-C Main Road, Ranchi JH 834001",2022-07-20,500000
+C092,Jharkhand CivicCon Pvt Ltd,"22-C Main Road, Ranchi JH 834001",2022-08-29,150000
+C093,Odisha KrishiYantra Supplies Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-07,100000
+C094,Odisha CropTech Agri Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-04,200000
+C095,Odisha HarvestAid Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-08-06,500000
+C096,Odisha FarmServ Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-16,100000
+C097,Odisha SoilPro Supplies Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-08-28,250000
+C098,Odisha AgriTech Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-08-30,150000
+C099,Odisha KrishiYantra Agri Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-12,300000
+C100,Odisha HarvestAid Supplies Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-19,100000
+C101,Odisha HarvestAid Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-08-13,150000
+C102,Odisha AgroMech Agri Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-08-28,200000
+C103,Odisha FarmServ Enterprises,"5-E Janpath, Bhubaneswar OD 751001",2022-07-29,100000
+C104,Odisha FarmServ Supplies Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-29,100000
+C105,Odisha FarmServ Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-06,150000
+C106,Odisha KrishiYantra Supplies Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-08-03,500000
+C107,Odisha SoilPro Supplies Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-06,250000
+C108,Odisha FarmEquip Agri Pvt Ltd,"5-E Janpath, Bhubaneswar OD 751001",2022-07-22,250000
+C109,Kolkata SupplyPro Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-04,150000
+C110,Kolkata SupplyPro Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-14,200000
+C111,Kolkata SupplyPro Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-02,500000
+C112,Kolkata MetalPro Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-06,250000
+C113,Kolkata ManufaPro Industries Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-02,500000
+C114,Kolkata SupplyPro Industries Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-30,300000
+C115,Kolkata FactoryMart Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-18,250000
+C116,Kolkata MetalPro Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-26,150000
+C117,Kolkata IndServ Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-30,200000
+C118,Kolkata IndEquip Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-03,200000
+C119,Kolkata IndServ Industries Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-02,100000
+C120,Kolkata ManufaPro Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-01,500000
+C121,Kolkata ManufaPro Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-21,200000
+C122,Kolkata ProductionAid Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-21,500000
+C123,Kolkata ManufaPro Industries Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-11,500000
+C124,Kolkata IndServ Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-19,500000
+C125,Kolkata MetalPro Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-03,200000
+C126,Kolkata IndServ Industries Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-04-16,300000
+C127,Kolkata ManufaPro Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-10,500000
+C128,Kolkata IndEquip Corp Pvt Ltd,"33-F Park Street, Kolkata WB 700016",2021-05-11,200000
+C129,Bhopal HomeCon Construction Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-18,200000
+C130,Bhopal NiwasBuild Construction Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-12-31,200000
+C131,Bhopal GrihaNirman Developers Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-11-25,300000
+C132,Bhopal HomeCon Builders Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-02,200000
+C133,Bhopal GharBano Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-21,500000
+C134,Bhopal HousePro Developers Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-10,150000
+C135,Bhopal GharBano Builders Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-12-03,300000
+C136,Bhopal GharBano Developers Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-22,250000
+C137,Bhopal VaastuBuild Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-12-04,150000
+C138,Bhopal GrihaNirman Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-12-11,300000
+C139,Bhopal GrihaNirman Developers Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-12-01,500000
+C140,Bhopal ShelterPro Builders Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-05,100000
+C141,Bhopal UrbanBuild Builders Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-11-27,100000
+C142,Bhopal NiwasBuild Builders Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2022-12-19,250000
+C143,Bhopal GrihaNirman Builders Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-20,250000
+C144,Bhopal HomeCon Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-08,200000
+C145,Bhopal ShelterPro Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-07,200000
+C146,Bhopal NiwasBuild Pvt Ltd,"18-G Hamidia Road, Bhopal MP 462001",2023-01-24,250000
+C147,Surat SpinEquip Machinery Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-28,150000
+C148,Surat LoomTech Machinery Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-14,500000
+C149,Surat SpinEquip Industries Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-08,150000
+C150,Surat FabriTech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-07,250000
+C151,Surat SpinEquip Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-23,500000
+C152,Surat TextilePro Tech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-31,250000
+C153,Surat FabriTech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-27,300000
+C154,Surat FabricAid Tech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-15,300000
+C155,Surat FabriTech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-31,500000
+C156,Surat GarmentMach Industries Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-29,250000
+C157,Surat FabricAid Tech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-27,500000
+C158,Surat FabriTech Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-30,100000
+C159,Surat WeaveMach Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-14,300000
+C160,Surat GarmentMach Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-25,300000
+C161,Surat SpinEquip Machinery Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-19,250000
+C162,Surat FabricAid Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-10-25,200000
+C163,Surat TextilePro Industries Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-09-08,150000
+C164,Surat TextilePro Machinery Pvt Ltd,"91-H Ring Road, Surat GJ 395001",2021-11-01,150000
+C165,Vijayawada RiverBuild Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-10-04,100000
+C166,Vijayawada IrriTech Projects Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-06,500000
+C167,Vijayawada DamCon Projects Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-22,300000
+C168,Vijayawada FloodGuard Infrastructure Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-11,500000
+C169,Vijayawada CivilPro Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-22,200000
+C170,Vijayawada FloodGuard Projects Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-16,100000
+C171,Vijayawada DamCon Engineers Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-10,300000
+C172,Vijayawada CivilPro Infrastructure Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-10,250000
+C173,Vijayawada DamCon Infrastructure Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-27,100000
+C174,Vijayawada HydroEngr Projects Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-14,250000
+C175,Vijayawada DamCon Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-03,200000
+C176,Vijayawada WaterWork Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-10,500000
+C177,Vijayawada RiverBuild Engineers Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-24,100000
+C178,Vijayawada WaterWork Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-08-20,500000
+C179,Vijayawada HydroEngr Projects Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-10-03,500000
+C180,Vijayawada HydroEngr Infrastructure Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-18,200000
+C181,Vijayawada IrriTech Projects Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-07,250000
+C182,Vijayawada IrriTech Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-17,300000
+C183,Vijayawada CivilPro Infrastructure Ltd,"45-I MG Road, Vijayawada AP 520001",2021-10-06,300000
+C184,Vijayawada WaterWork Pvt Ltd,"45-I MG Road, Vijayawada AP 520001",2021-09-06,100000
+C185,Maharashtra Defence Solutions Ltd,134-A Maharashtra Industrial Area,2014-11-29,34489097
+C186,Karnataka Aerospace Solutions Ltd,105-B Karnataka Industrial Area,2020-04-17,23984666
+C187,Telangana Railway Solutions Ltd,86-C Telangana Industrial Area,2010-08-03,47338081
+C188,Delhi Power Solutions Ltd,65-D Delhi Industrial Area,2016-04-04,30941884
+C189,Kerala Water Solutions Ltd,90-E Kerala Industrial Area,2016-07-14,49534254
+C190,Punjab Petrochemicals Solutions Ltd,80-F Punjab Industrial Area,2011-06-13,44932540
+C191,Haryana Pharmaceutical Solutions Ltd,180-G Haryana Industrial Area,2019-02-13,13576094
+C192,Assam Telecom Solutions Ltd,93-H Assam Industrial Area,2015-09-14,29281872
+C193,Goa Financial Solutions Ltd,58-I Goa Industrial Area,2013-10-31,37633089
+C194,Himachal Steel Solutions Ltd,198-J Himachal Industrial Area,2013-04-26,11787441
+C195,Maharashtra Defence Solutions Ltd,153-K Maharashtra Industrial Area,2019-10-30,46475389
+C196,Karnataka Aerospace Solutions Ltd,185-L Karnataka Industrial Area,2012-01-11,46925623
+C197,Telangana Railway Solutions Ltd,157-M Telangana Industrial Area,2014-02-01,20940381
+C198,Delhi Power Solutions Ltd,80-N Delhi Industrial Area,2012-08-16,40836881
+C199,Kerala Water Solutions Ltd,119-O Kerala Industrial Area,2017-08-10,43280197
+C200,Punjab Petrochemicals Solutions Ltd,42-P Punjab Industrial Area,2015-08-22,40397227
+C201,Haryana Pharmaceutical Solutions Ltd,165-Q Haryana Industrial Area,2019-10-16,21777431
+C202,Assam Telecom Solutions Ltd,32-R Assam Industrial Area,2020-06-23,11884680
+C203,Goa Financial Solutions Ltd,38-S Goa Industrial Area,2013-01-22,35153302
+C204,Himachal Steel Solutions Ltd,7-T Himachal Industrial Area,2019-02-28,35274686
+C205,Maharashtra Defence Solutions Ltd,99-U Maharashtra Industrial Area,2015-08-19,30096130
+C206,Karnataka Aerospace Solutions Ltd,183-V Karnataka Industrial Area,2010-04-26,26386579
+C207,Telangana Railway Solutions Ltd,179-W Telangana Industrial Area,2010-06-06,24252150
+C208,Delhi Power Solutions Ltd,21-X Delhi Industrial Area,2015-01-12,46295322
+C209,Kerala Water Solutions Ltd,187-Y Kerala Industrial Area,2019-05-14,15034091
+C210,Punjab Petrochemicals Solutions Ltd,13-Z Punjab Industrial Area,2012-08-31,25209914
+C211,Haryana Pharmaceutical Solutions Ltd,17-A Haryana Industrial Area,2018-11-26,46796109
+C212,Assam Telecom Solutions Ltd,132-B Assam Industrial Area,2016-01-05,6102957
+C213,Goa Financial Solutions Ltd,158-C Goa Industrial Area,2013-04-08,33805734
+C214,Himachal Steel Solutions Ltd,172-D Himachal Industrial Area,2014-09-03,17570423
+C215,Maharashtra Defence Solutions Ltd,130-E Maharashtra Industrial Area,2010-10-05,40303251
+C216,Karnataka Aerospace Solutions Ltd,96-F Karnataka Industrial Area,2010-06-28,47659144
+C217,Telangana Railway Solutions Ltd,62-G Telangana Industrial Area,2014-01-02,9533845
+C218,Delhi Power Solutions Ltd,12-H Delhi Industrial Area,2018-03-31,27314946
+C219,Kerala Water Solutions Ltd,200-I Kerala Industrial Area,2019-02-15,48137283
+C220,Punjab Petrochemicals Solutions Ltd,17-J Punjab Industrial Area,2017-01-31,17232469
+C221,Haryana Pharmaceutical Solutions Ltd,11-K Haryana Industrial Area,2012-04-05,7939789
+C222,Assam Telecom Solutions Ltd,65-L Assam Industrial Area,2014-06-20,41442173
+C223,Goa Financial Solutions Ltd,168-M Goa Industrial Area,2013-03-17,28956131
+C224,Himachal Steel Solutions Ltd,103-N Himachal Industrial Area,2018-12-19,29697348
+C225,Maharashtra Defence Solutions Ltd,178-O Maharashtra Industrial Area,2020-12-02,17537091
+C226,Karnataka Aerospace Solutions Ltd,21-P Karnataka Industrial Area,2012-12-28,10543964
+C227,Telangana Railway Solutions Ltd,27-Q Telangana Industrial Area,2016-02-13,24714330
+C228,Delhi Power Solutions Ltd,184-R Delhi Industrial Area,2013-06-09,34924900
+C229,Kerala Water Solutions Ltd,187-S Kerala Industrial Area,2013-12-10,35006363
+C230,Punjab Petrochemicals Solutions Ltd,20-T Punjab Industrial Area,2013-01-29,47914058
+C231,Haryana Pharmaceutical Solutions Ltd,37-U Haryana Industrial Area,2018-12-26,15736527
+C232,Assam Telecom Solutions Ltd,94-V Assam Industrial Area,2010-10-03,20837381
+C233,Goa Financial Solutions Ltd,174-W Goa Industrial Area,2010-05-13,45607226
+C234,Himachal Steel Solutions Ltd,36-X Himachal Industrial Area,2014-12-24,10159693
+C235,Maharashtra Defence Solutions Ltd,30-Y Maharashtra Industrial Area,2017-04-14,23702553
+C236,Karnataka Aerospace Solutions Ltd,144-Z Karnataka Industrial Area,2015-08-07,39745297
+C237,Telangana Railway Solutions Ltd,157-A Telangana Industrial Area,2017-11-23,34948881
+C238,Delhi Power Solutions Ltd,19-B Delhi Industrial Area,2012-03-30,13230058
+C239,Kerala Water Solutions Ltd,89-C Kerala Industrial Area,2010-12-26,26447172
+C240,Punjab Petrochemicals Solutions Ltd,183-D Punjab Industrial Area,2013-04-04,25129751
+C241,Haryana Pharmaceutical Solutions Ltd,36-E Haryana Industrial Area,2012-07-07,13144496
+C242,Assam Telecom Solutions Ltd,95-F Assam Industrial Area,2014-01-18,42179749
+C243,Goa Financial Solutions Ltd,80-G Goa Industrial Area,2016-11-11,10785823
+C244,Himachal Steel Solutions Ltd,148-H Himachal Industrial Area,2015-11-24,32567993
+C245,Maharashtra Defence Solutions Ltd,120-I Maharashtra Industrial Area,2017-03-16,9977130
+C246,Karnataka Aerospace Solutions Ltd,197-J Karnataka Industrial Area,2017-03-05,44445650
+C247,Telangana Railway Solutions Ltd,133-K Telangana Industrial Area,2020-03-19,8718693
+C248,Delhi Power Solutions Ltd,89-L Delhi Industrial Area,2011-10-26,26653396
+C249,Kerala Water Solutions Ltd,71-M Kerala Industrial Area,2012-03-15,47617959
+C250,Punjab Petrochemicals Solutions Ltd,129-N Punjab Industrial Area,2016-11-21,40801104
+C251,Haryana Pharmaceutical Solutions Ltd,160-O Haryana Industrial Area,2011-09-24,16489079
+C252,Assam Telecom Solutions Ltd,12-P Assam Industrial Area,2019-04-04,6904112
+C253,Goa Financial Solutions Ltd,159-Q Goa Industrial Area,2018-08-08,43395477
+C254,Himachal Steel Solutions Ltd,78-R Himachal Industrial Area,2016-02-13,24439535
+C255,Maharashtra Defence Solutions Ltd,177-S Maharashtra Industrial Area,2013-05-03,35436831
+C256,Karnataka Aerospace Solutions Ltd,53-T Karnataka Industrial Area,2014-08-30,37497543
+C257,Telangana Railway Solutions Ltd,103-U Telangana Industrial Area,2013-07-04,26428960
+C258,Delhi Power Solutions Ltd,82-V Delhi Industrial Area,2015-10-11,42691775
+C259,Kerala Water Solutions Ltd,37-W Kerala Industrial Area,2012-12-31,35171877
+C260,Punjab Petrochemicals Solutions Ltd,108-X Punjab Industrial Area,2020-08-08,30779858
+C261,Haryana Pharmaceutical Solutions Ltd,49-Y Haryana Industrial Area,2020-06-21,43767920
+C262,Assam Telecom Solutions Ltd,128-Z Assam Industrial Area,2015-03-28,38471197
+C263,Goa Financial Solutions Ltd,56-A Goa Industrial Area,2015-09-02,35684228
+C264,Himachal Steel Solutions Ltd,168-B Himachal Industrial Area,2013-02-26,38211787
+C265,Maharashtra Defence Solutions Ltd,35-C Maharashtra Industrial Area,2010-02-03,12214007
+C266,Karnataka Aerospace Solutions Ltd,12-D Karnataka Industrial Area,2018-07-26,32061922
+C267,Telangana Railway Solutions Ltd,142-E Telangana Industrial Area,2016-04-20,18063096
+C268,Delhi Power Solutions Ltd,72-F Delhi Industrial Area,2015-08-28,35222770
+C269,Kerala Water Solutions Ltd,143-G Kerala Industrial Area,2014-06-02,30044916
+C270,Punjab Petrochemicals Solutions Ltd,103-H Punjab Industrial Area,2012-03-26,45430604
+C271,Haryana Pharmaceutical Solutions Ltd,133-I Haryana Industrial Area,2011-07-16,27349983
+C272,Assam Telecom Solutions Ltd,84-J Assam Industrial Area,2020-01-07,39595004
+C273,Goa Financial Solutions Ltd,87-K Goa Industrial Area,2016-11-30,25081276
+C274,Himachal Steel Solutions Ltd,95-L Himachal Industrial Area,2013-05-12,36869502
+C275,Maharashtra Defence Solutions Ltd,79-M Maharashtra Industrial Area,2020-12-27,32953544
+C276,Karnataka Aerospace Solutions Ltd,148-N Karnataka Industrial Area,2012-12-23,48995965
+C277,Telangana Railway Solutions Ltd,135-O Telangana Industrial Area,2016-07-18,37242372
+C278,Delhi Power Solutions Ltd,29-P Delhi Industrial Area,2010-05-10,43424540
+C279,Kerala Water Solutions Ltd,106-Q Kerala Industrial Area,2013-07-08,33103870
+C280,Punjab Petrochemicals Solutions Ltd,189-R Punjab Industrial Area,2018-09-10,46035597
+C281,Haryana Pharmaceutical Solutions Ltd,84-S Haryana Industrial Area,2015-10-26,18914466
+C282,Assam Telecom Solutions Ltd,137-T Assam Industrial Area,2013-07-09,16622075
+C283,Goa Financial Solutions Ltd,68-U Goa Industrial Area,2017-07-31,48171742
+C284,Himachal Steel Solutions Ltd,58-V Himachal Industrial Area,2013-02-16,42452561

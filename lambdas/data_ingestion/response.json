@@ -1,0 +1,1 @@
+{"statusCode": 200, "body": "{\"message\": \"Ingestion complete\", \"records_written\": {\"companies\": 8, \"directors\": 4, \"contracts\": 8, \"politicians\": 3, \"edges\": 12}, \"total\": 35}"}

@@ -1,0 +1,26 @@
+politician_id,name,constituency,party,state,relation,related_name,related_din
+P01,Mahendra Verma,Kanpur Cantonment,Samajwadi Party,Uttar Pradesh,self,Mahendra Verma,
+P01,Mahendra Verma,Kanpur Cantonment,Samajwadi Party,Uttar Pradesh,spouse,Arjun Sharma,10000001
+P01,Mahendra Verma,Kanpur Cantonment,Samajwadi Party,Uttar Pradesh,nephew,Priya Sharma,10000002
+P02,Devendra Rathore,Jaipur Rural,BJP,Rajasthan,self,Devendra Rathore,
+P02,Devendra Rathore,Jaipur Rural,BJP,Rajasthan,son,Manish Gupta,10000003
+P03,Selvam Murugan,Chennai South,DMK,Tamil Nadu,self,Selvam Murugan,
+P03,Selvam Murugan,Chennai South,DMK,Tamil Nadu,spouse,Gopal Yadav,10000005
+P03,Selvam Murugan,Chennai South,DMK,Tamil Nadu,nephew,Radha Sharma,10000006
+P04,Ramesh Prasad Yadav,Patna Sahib,RJD,Bihar,self,Ramesh Prasad Yadav,
+P04,Ramesh Prasad Yadav,Patna Sahib,RJD,Bihar,nephew,Ashok Mishra,10000009
+P05,Sunil Oraon,Ranchi East,JMM,Jharkhand,self,Sunil Oraon,
+P05,Sunil Oraon,Ranchi East,JMM,Jharkhand,daughter,Geeta Yadav,10000013
+P06,Prakash Nayak,Bhubaneswar Central,BJD,Odisha,self,Prakash Nayak,
+P06,Prakash Nayak,Bhubaneswar Central,BJD,Odisha,brother,Anil Verma,10000015
+P07,Debasish Sarkar,Jadavpur,TMC,West Bengal,self,Debasish Sarkar,
+P07,Debasish Sarkar,Jadavpur,TMC,West Bengal,nephew,Mukesh Tiwari,10000017
+P07,Debasish Sarkar,Jadavpur,TMC,West Bengal,nephew,Suresh Sharma,10000018
+P08,Santosh Tiwari,Bhopal South,BJP,Madhya Pradesh,self,Santosh Tiwari,
+P08,Santosh Tiwari,Bhopal South,BJP,Madhya Pradesh,spouse,Sarla Gupta,10000020
+P08,Santosh Tiwari,Bhopal South,BJP,Madhya Pradesh,nephew,Deepa Tiwari,10000021
+P09,Haresh Patel,Surat East,BJP,Gujarat,self,Haresh Patel,
+P09,Haresh Patel,Surat East,BJP,Gujarat,spouse,Dilip Tiwari,10000024
+P09,Haresh Patel,Surat East,BJP,Gujarat,nephew,Shobha Verma,10000025
+P10,Venkat Rao Reddy,Vijayawada Central,YSRCP,Andhra Pradesh,self,Venkat Rao Reddy,
+P10,Venkat Rao Reddy,Vijayawada Central,YSRCP,Andhra Pradesh,spouse,Bharat Singh,10000026

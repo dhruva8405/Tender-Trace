@@ -1,0 +1,285 @@
+contract_id,company_id,description,value_inr,award_date,ministry,state
+CON001,C001,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,2499914,2022-12-31,Health & Family Welfare,Uttar Pradesh
+CON002,C002,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,11142600,2023-01-14,Health & Family Welfare,Uttar Pradesh
+CON003,C003,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,4678638,2023-01-31,Health & Family Welfare,Uttar Pradesh
+CON004,C004,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,3556017,2022-12-09,Health & Family Welfare,Uttar Pradesh
+CON005,C005,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,9707870,2023-01-23,Health & Family Welfare,Uttar Pradesh
+CON006,C006,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,5226067,2022-12-27,Health & Family Welfare,Uttar Pradesh
+CON007,C007,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,3694522,2023-01-11,Health & Family Welfare,Uttar Pradesh
+CON008,C008,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,7960453,2023-01-07,Health & Family Welfare,Uttar Pradesh
+CON009,C009,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,6107245,2023-02-02,Health & Family Welfare,Uttar Pradesh
+CON010,C010,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,2938483,2023-01-28,Health & Family Welfare,Uttar Pradesh
+CON011,C011,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,5539704,2023-01-10,Health & Family Welfare,Uttar Pradesh
+CON012,C012,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,6443951,2023-01-05,Health & Family Welfare,Uttar Pradesh
+CON013,C013,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,8700828,2023-02-08,Health & Family Welfare,Uttar Pradesh
+CON014,C014,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,2790481,2023-01-11,Health & Family Welfare,Uttar Pradesh
+CON015,C015,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,8402509,2023-01-19,Health & Family Welfare,Uttar Pradesh
+CON016,C016,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,7707197,2023-02-08,Health & Family Welfare,Uttar Pradesh
+CON017,C017,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,6418934,2023-01-28,Health & Family Welfare,Uttar Pradesh
+CON018,C018,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,8273233,2023-01-19,Health & Family Welfare,Uttar Pradesh
+CON019,C019,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,8089806,2022-12-31,Health & Family Welfare,Uttar Pradesh
+CON020,C020,Medical Equipment supply – Uttar Pradesh Health & Family Welfare,10153566,2023-01-04,Health & Family Welfare,Uttar Pradesh
+CON021,C021,Infrastructure supply – Rajasthan Public Works,8264956,2022-09-06,Public Works,Rajasthan
+CON022,C022,Infrastructure supply – Rajasthan Public Works,2352896,2022-08-27,Public Works,Rajasthan
+CON023,C023,Infrastructure supply – Rajasthan Public Works,2527021,2022-08-03,Public Works,Rajasthan
+CON024,C024,Infrastructure supply – Rajasthan Public Works,11046844,2022-09-13,Public Works,Rajasthan
+CON025,C025,Infrastructure supply – Rajasthan Public Works,3626229,2022-08-20,Public Works,Rajasthan
+CON026,C026,Infrastructure supply – Rajasthan Public Works,3651177,2022-10-08,Public Works,Rajasthan
+CON027,C027,Infrastructure supply – Rajasthan Public Works,5191175,2022-09-26,Public Works,Rajasthan
+CON028,C028,Infrastructure supply – Rajasthan Public Works,3264748,2022-09-10,Public Works,Rajasthan
+CON029,C029,Infrastructure supply – Rajasthan Public Works,5965789,2022-09-19,Public Works,Rajasthan
+CON030,C030,Infrastructure supply – Rajasthan Public Works,4762152,2022-09-02,Public Works,Rajasthan
+CON031,C031,Infrastructure supply – Rajasthan Public Works,11324245,2022-09-19,Public Works,Rajasthan
+CON032,C032,Infrastructure supply – Rajasthan Public Works,11096526,2022-09-17,Public Works,Rajasthan
+CON033,C033,Infrastructure supply – Rajasthan Public Works,10519948,2022-08-05,Public Works,Rajasthan
+CON034,C034,Infrastructure supply – Rajasthan Public Works,4011363,2022-08-28,Public Works,Rajasthan
+CON035,C035,Infrastructure supply – Rajasthan Public Works,5426900,2022-09-23,Public Works,Rajasthan
+CON036,C036,Infrastructure supply – Rajasthan Public Works,7304573,2022-09-13,Public Works,Rajasthan
+CON037,C037,Infrastructure supply – Rajasthan Public Works,5576135,2022-10-01,Public Works,Rajasthan
+CON038,C038,Infrastructure supply – Rajasthan Public Works,6781295,2022-10-20,Public Works,Rajasthan
+CON039,C039,IT Services supply – Tamil Nadu Electronics & IT,5533779,2022-10-14,Electronics & IT,Tamil Nadu
+CON040,C040,IT Services supply – Tamil Nadu Electronics & IT,6213115,2022-10-23,Electronics & IT,Tamil Nadu
+CON041,C041,IT Services supply – Tamil Nadu Electronics & IT,7596150,2022-09-19,Electronics & IT,Tamil Nadu
+CON042,C042,IT Services supply – Tamil Nadu Electronics & IT,9175395,2022-10-04,Electronics & IT,Tamil Nadu
+CON043,C043,IT Services supply – Tamil Nadu Electronics & IT,8194416,2022-08-16,Electronics & IT,Tamil Nadu
+CON044,C044,IT Services supply – Tamil Nadu Electronics & IT,2669324,2022-10-07,Electronics & IT,Tamil Nadu
+CON045,C045,IT Services supply – Tamil Nadu Electronics & IT,11393286,2022-11-10,Electronics & IT,Tamil Nadu
+CON046,C046,IT Services supply – Tamil Nadu Electronics & IT,2415846,2022-11-03,Electronics & IT,Tamil Nadu
+CON047,C047,IT Services supply – Tamil Nadu Electronics & IT,3813543,2022-10-09,Electronics & IT,Tamil Nadu
+CON048,C048,IT Services supply – Tamil Nadu Electronics & IT,7866294,2022-11-01,Electronics & IT,Tamil Nadu
+CON049,C049,IT Services supply – Tamil Nadu Electronics & IT,6674183,2022-09-14,Electronics & IT,Tamil Nadu
+CON050,C050,IT Services supply – Tamil Nadu Electronics & IT,7555772,2022-10-05,Electronics & IT,Tamil Nadu
+CON051,C051,IT Services supply – Tamil Nadu Electronics & IT,2641849,2022-10-21,Electronics & IT,Tamil Nadu
+CON052,C052,IT Services supply – Tamil Nadu Electronics & IT,10580255,2022-10-09,Electronics & IT,Tamil Nadu
+CON053,C053,IT Services supply – Tamil Nadu Electronics & IT,9315831,2022-10-08,Electronics & IT,Tamil Nadu
+CON054,C054,IT Services supply – Tamil Nadu Electronics & IT,7266630,2022-09-23,Electronics & IT,Tamil Nadu
+CON055,C055,School Furniture supply – Bihar Education,7049101,2022-02-20,Education,Bihar
+CON056,C056,School Furniture supply – Bihar Education,11730529,2022-02-11,Education,Bihar
+CON057,C057,School Furniture supply – Bihar Education,4846949,2022-01-31,Education,Bihar
+CON058,C058,School Furniture supply – Bihar Education,5940441,2022-02-22,Education,Bihar
+CON059,C059,School Furniture supply – Bihar Education,6107776,2022-01-26,Education,Bihar
+CON060,C060,School Furniture supply – Bihar Education,8442089,2022-02-15,Education,Bihar
+CON061,C061,School Furniture supply – Bihar Education,9132769,2022-02-06,Education,Bihar
+CON062,C062,School Furniture supply – Bihar Education,6180853,2022-02-28,Education,Bihar
+CON063,C063,School Furniture supply – Bihar Education,10468772,2022-01-20,Education,Bihar
+CON064,C064,School Furniture supply – Bihar Education,6147994,2022-02-15,Education,Bihar
+CON065,C065,School Furniture supply – Bihar Education,6793722,2022-01-17,Education,Bihar
+CON066,C066,School Furniture supply – Bihar Education,5879923,2022-01-03,Education,Bihar
+CON067,C067,School Furniture supply – Bihar Education,7551268,2022-02-13,Education,Bihar
+CON068,C068,School Furniture supply – Bihar Education,11799226,2022-01-25,Education,Bihar
+CON069,C069,School Furniture supply – Bihar Education,8542890,2022-02-20,Education,Bihar
+CON070,C070,School Furniture supply – Bihar Education,2486955,2022-02-04,Education,Bihar
+CON071,C071,School Furniture supply – Bihar Education,9841505,2022-01-25,Education,Bihar
+CON072,C072,School Furniture supply – Bihar Education,9190929,2022-03-13,Education,Bihar
+CON073,C073,School Furniture supply – Bihar Education,5551070,2022-01-04,Education,Bihar
+CON074,C074,School Furniture supply – Bihar Education,3374158,2022-01-10,Education,Bihar
+CON075,C075,Construction supply – Jharkhand Tribal Affairs,4556551,2022-11-13,Tribal Affairs,Jharkhand
+CON076,C076,Construction supply – Jharkhand Tribal Affairs,6299055,2022-10-04,Tribal Affairs,Jharkhand
+CON077,C077,Construction supply – Jharkhand Tribal Affairs,3813596,2022-10-02,Tribal Affairs,Jharkhand
+CON078,C078,Construction supply – Jharkhand Tribal Affairs,5327421,2022-10-26,Tribal Affairs,Jharkhand
+CON079,C079,Construction supply – Jharkhand Tribal Affairs,11494772,2022-10-01,Tribal Affairs,Jharkhand
+CON080,C080,Construction supply – Jharkhand Tribal Affairs,7724909,2022-10-11,Tribal Affairs,Jharkhand
+CON081,C081,Construction supply – Jharkhand Tribal Affairs,9713146,2022-10-20,Tribal Affairs,Jharkhand
+CON082,C082,Construction supply – Jharkhand Tribal Affairs,9307727,2022-09-15,Tribal Affairs,Jharkhand
+CON083,C083,Construction supply – Jharkhand Tribal Affairs,6091349,2022-10-27,Tribal Affairs,Jharkhand
+CON084,C084,Construction supply – Jharkhand Tribal Affairs,10179730,2022-09-07,Tribal Affairs,Jharkhand
+CON085,C085,Construction supply – Jharkhand Tribal Affairs,6635017,2022-11-03,Tribal Affairs,Jharkhand
+CON086,C086,Construction supply – Jharkhand Tribal Affairs,6031966,2022-09-15,Tribal Affairs,Jharkhand
+CON087,C087,Construction supply – Jharkhand Tribal Affairs,8784725,2022-09-17,Tribal Affairs,Jharkhand
+CON088,C088,Construction supply – Jharkhand Tribal Affairs,10907391,2022-10-22,Tribal Affairs,Jharkhand
+CON089,C089,Construction supply – Jharkhand Tribal Affairs,9612582,2022-11-05,Tribal Affairs,Jharkhand
+CON090,C090,Construction supply – Jharkhand Tribal Affairs,4005795,2022-09-11,Tribal Affairs,Jharkhand
+CON091,C091,Construction supply – Jharkhand Tribal Affairs,11891626,2022-10-04,Tribal Affairs,Jharkhand
+CON092,C092,Construction supply – Jharkhand Tribal Affairs,5010529,2022-10-21,Tribal Affairs,Jharkhand
+CON093,C093,Agri Equipment supply – Odisha Agriculture,9389840,2022-09-05,Agriculture,Odisha
+CON094,C094,Agri Equipment supply – Odisha Agriculture,8722755,2022-08-07,Agriculture,Odisha
+CON095,C095,Agri Equipment supply – Odisha Agriculture,11442881,2022-09-14,Agriculture,Odisha
+CON096,C096,Agri Equipment supply – Odisha Agriculture,10767312,2022-10-03,Agriculture,Odisha
+CON097,C097,Agri Equipment supply – Odisha Agriculture,11540019,2022-10-16,Agriculture,Odisha
+CON098,C098,Agri Equipment supply – Odisha Agriculture,3362099,2022-11-10,Agriculture,Odisha
+CON099,C099,Agri Equipment supply – Odisha Agriculture,8853787,2022-08-11,Agriculture,Odisha
+CON100,C100,Agri Equipment supply – Odisha Agriculture,6743227,2022-10-02,Agriculture,Odisha
+CON101,C101,Agri Equipment supply – Odisha Agriculture,3925626,2022-10-09,Agriculture,Odisha
+CON102,C102,Agri Equipment supply – Odisha Agriculture,4783722,2022-09-30,Agriculture,Odisha
+CON103,C103,Agri Equipment supply – Odisha Agriculture,8752972,2022-10-11,Agriculture,Odisha
+CON104,C104,Agri Equipment supply – Odisha Agriculture,7407658,2022-10-14,Agriculture,Odisha
+CON105,C105,Agri Equipment supply – Odisha Agriculture,2674975,2022-09-10,Agriculture,Odisha
+CON106,C106,Agri Equipment supply – Odisha Agriculture,11820201,2022-09-13,Agriculture,Odisha
+CON107,C107,Agri Equipment supply – Odisha Agriculture,7386463,2022-08-26,Agriculture,Odisha
+CON108,C108,Agri Equipment supply – Odisha Agriculture,8718473,2022-10-02,Agriculture,Odisha
+CON109,C109,Industrial Goods supply – West Bengal Textiles,10363326,2021-06-12,Textiles,West Bengal
+CON110,C110,Industrial Goods supply – West Bengal Textiles,9350368,2021-06-01,Textiles,West Bengal
+CON111,C111,Industrial Goods supply – West Bengal Textiles,4657144,2021-06-16,Textiles,West Bengal
+CON112,C112,Industrial Goods supply – West Bengal Textiles,9741810,2021-06-12,Textiles,West Bengal
+CON113,C113,Industrial Goods supply – West Bengal Textiles,10094999,2021-06-27,Textiles,West Bengal
+CON114,C114,Industrial Goods supply – West Bengal Textiles,10526867,2021-06-11,Textiles,West Bengal
+CON115,C115,Industrial Goods supply – West Bengal Textiles,6745250,2021-05-18,Textiles,West Bengal
+CON116,C116,Industrial Goods supply – West Bengal Textiles,7577416,2021-07-17,Textiles,West Bengal
+CON117,C117,Industrial Goods supply – West Bengal Textiles,8425184,2021-08-04,Textiles,West Bengal
+CON118,C118,Industrial Goods supply – West Bengal Textiles,8395997,2021-06-17,Textiles,West Bengal
+CON119,C119,Industrial Goods supply – West Bengal Textiles,9387112,2021-06-07,Textiles,West Bengal
+CON120,C120,Industrial Goods supply – West Bengal Textiles,4589751,2021-06-11,Textiles,West Bengal
+CON121,C121,Industrial Goods supply – West Bengal Textiles,3347467,2021-07-31,Textiles,West Bengal
+CON122,C122,Industrial Goods supply – West Bengal Textiles,2602286,2021-06-24,Textiles,West Bengal
+CON123,C123,Industrial Goods supply – West Bengal Textiles,3516313,2021-07-27,Textiles,West Bengal
+CON124,C124,Industrial Goods supply – West Bengal Textiles,4791137,2021-07-16,Textiles,West Bengal
+CON125,C125,Industrial Goods supply – West Bengal Textiles,8288789,2021-05-25,Textiles,West Bengal
+CON126,C126,Industrial Goods supply – West Bengal Textiles,4937176,2021-05-26,Textiles,West Bengal
+CON127,C127,Industrial Goods supply – West Bengal Textiles,4401116,2021-07-16,Textiles,West Bengal
+CON128,C128,Industrial Goods supply – West Bengal Textiles,2157662,2021-07-22,Textiles,West Bengal
+CON129,C129,Housing Construction supply – Madhya Pradesh Rural Development,3789344,2023-03-19,Rural Development,Madhya Pradesh
+CON130,C130,Housing Construction supply – Madhya Pradesh Rural Development,2368085,2023-02-17,Rural Development,Madhya Pradesh
+CON131,C131,Housing Construction supply – Madhya Pradesh Rural Development,10333700,2023-02-10,Rural Development,Madhya Pradesh
+CON132,C132,Housing Construction supply – Madhya Pradesh Rural Development,6204819,2023-02-13,Rural Development,Madhya Pradesh
+CON133,C133,Housing Construction supply – Madhya Pradesh Rural Development,9395785,2023-04-11,Rural Development,Madhya Pradesh
+CON134,C134,Housing Construction supply – Madhya Pradesh Rural Development,8970985,2023-03-01,Rural Development,Madhya Pradesh
+CON135,C135,Housing Construction supply – Madhya Pradesh Rural Development,6572250,2023-02-03,Rural Development,Madhya Pradesh
+CON136,C136,Housing Construction supply – Madhya Pradesh Rural Development,3932227,2023-03-14,Rural Development,Madhya Pradesh
+CON137,C137,Housing Construction supply – Madhya Pradesh Rural Development,3515030,2023-01-26,Rural Development,Madhya Pradesh
+CON138,C138,Housing Construction supply – Madhya Pradesh Rural Development,6398338,2023-02-02,Rural Development,Madhya Pradesh
+CON139,C139,Housing Construction supply – Madhya Pradesh Rural Development,11418852,2023-01-01,Rural Development,Madhya Pradesh
+CON140,C140,Housing Construction supply – Madhya Pradesh Rural Development,8850067,2023-02-23,Rural Development,Madhya Pradesh
+CON141,C141,Housing Construction supply – Madhya Pradesh Rural Development,3630611,2023-01-03,Rural Development,Madhya Pradesh
+CON142,C142,Housing Construction supply – Madhya Pradesh Rural Development,11062926,2023-03-06,Rural Development,Madhya Pradesh
+CON143,C143,Housing Construction supply – Madhya Pradesh Rural Development,8847048,2023-03-30,Rural Development,Madhya Pradesh
+CON144,C144,Housing Construction supply – Madhya Pradesh Rural Development,5961312,2023-03-07,Rural Development,Madhya Pradesh
+CON145,C145,Housing Construction supply – Madhya Pradesh Rural Development,6628522,2023-03-03,Rural Development,Madhya Pradesh
+CON146,C146,Housing Construction supply – Madhya Pradesh Rural Development,2358318,2023-03-08,Rural Development,Madhya Pradesh
+CON147,C147,Textile Machinery supply – Gujarat Textiles,4180906,2021-11-06,Textiles,Gujarat
+CON148,C148,Textile Machinery supply – Gujarat Textiles,8010308,2021-10-14,Textiles,Gujarat
+CON149,C149,Textile Machinery supply – Gujarat Textiles,9062546,2021-10-16,Textiles,Gujarat
+CON150,C150,Textile Machinery supply – Gujarat Textiles,10453010,2021-12-04,Textiles,Gujarat
+CON151,C151,Textile Machinery supply – Gujarat Textiles,2522621,2022-01-02,Textiles,Gujarat
+CON152,C152,Textile Machinery supply – Gujarat Textiles,9441741,2021-12-31,Textiles,Gujarat
+CON153,C153,Textile Machinery supply – Gujarat Textiles,6614002,2021-11-04,Textiles,Gujarat
+CON154,C154,Textile Machinery supply – Gujarat Textiles,9217547,2021-12-16,Textiles,Gujarat
+CON155,C155,Textile Machinery supply – Gujarat Textiles,5833486,2021-12-28,Textiles,Gujarat
+CON156,C156,Textile Machinery supply – Gujarat Textiles,3595275,2022-01-13,Textiles,Gujarat
+CON157,C157,Textile Machinery supply – Gujarat Textiles,9956894,2021-11-05,Textiles,Gujarat
+CON158,C158,Textile Machinery supply – Gujarat Textiles,8251976,2021-12-05,Textiles,Gujarat
+CON159,C159,Textile Machinery supply – Gujarat Textiles,7932391,2021-12-09,Textiles,Gujarat
+CON160,C160,Textile Machinery supply – Gujarat Textiles,11695863,2021-10-31,Textiles,Gujarat
+CON161,C161,Textile Machinery supply – Gujarat Textiles,11332586,2021-12-10,Textiles,Gujarat
+CON162,C162,Textile Machinery supply – Gujarat Textiles,11340543,2021-12-29,Textiles,Gujarat
+CON163,C163,Textile Machinery supply – Gujarat Textiles,7889195,2021-10-29,Textiles,Gujarat
+CON164,C164,Textile Machinery supply – Gujarat Textiles,2514340,2021-12-10,Textiles,Gujarat
+CON165,C165,Civil Engineering supply – Andhra Pradesh Irrigation,2834876,2021-12-21,Irrigation,Andhra Pradesh
+CON166,C166,Civil Engineering supply – Andhra Pradesh Irrigation,9416270,2021-11-13,Irrigation,Andhra Pradesh
+CON167,C167,Civil Engineering supply – Andhra Pradesh Irrigation,3860421,2021-10-18,Irrigation,Andhra Pradesh
+CON168,C168,Civil Engineering supply – Andhra Pradesh Irrigation,8631419,2021-10-25,Irrigation,Andhra Pradesh
+CON169,C169,Civil Engineering supply – Andhra Pradesh Irrigation,6286905,2021-11-08,Irrigation,Andhra Pradesh
+CON170,C170,Civil Engineering supply – Andhra Pradesh Irrigation,4167376,2021-09-26,Irrigation,Andhra Pradesh
+CON171,C171,Civil Engineering supply – Andhra Pradesh Irrigation,8661748,2021-10-14,Irrigation,Andhra Pradesh
+CON172,C172,Civil Engineering supply – Andhra Pradesh Irrigation,9202195,2021-10-15,Irrigation,Andhra Pradesh
+CON173,C173,Civil Engineering supply – Andhra Pradesh Irrigation,4883553,2021-10-16,Irrigation,Andhra Pradesh
+CON174,C174,Civil Engineering supply – Andhra Pradesh Irrigation,11879620,2021-10-10,Irrigation,Andhra Pradesh
+CON175,C175,Civil Engineering supply – Andhra Pradesh Irrigation,7587964,2021-10-17,Irrigation,Andhra Pradesh
+CON176,C176,Civil Engineering supply – Andhra Pradesh Irrigation,7861544,2021-11-28,Irrigation,Andhra Pradesh
+CON177,C177,Civil Engineering supply – Andhra Pradesh Irrigation,4910830,2021-10-05,Irrigation,Andhra Pradesh
+CON178,C178,Civil Engineering supply – Andhra Pradesh Irrigation,11457911,2021-11-06,Irrigation,Andhra Pradesh
+CON179,C179,Civil Engineering supply – Andhra Pradesh Irrigation,3145653,2021-11-30,Irrigation,Andhra Pradesh
+CON180,C180,Civil Engineering supply – Andhra Pradesh Irrigation,10511700,2021-11-09,Irrigation,Andhra Pradesh
+CON181,C181,Civil Engineering supply – Andhra Pradesh Irrigation,6816353,2021-10-30,Irrigation,Andhra Pradesh
+CON182,C182,Civil Engineering supply – Andhra Pradesh Irrigation,11736311,2021-11-15,Irrigation,Andhra Pradesh
+CON183,C183,Civil Engineering supply – Andhra Pradesh Irrigation,9979730,2021-11-25,Irrigation,Andhra Pradesh
+CON184,C184,Civil Engineering supply – Andhra Pradesh Irrigation,4895058,2021-11-07,Irrigation,Andhra Pradesh
+CON185,C185,Defence Electronics supply contract,150678581,2020-02-03,Pharmaceuticals,Maharashtra
+CON186,C186,Aerospace Components supply contract,113996341,2027-12-30,Defence,Karnataka
+CON187,C187,Railway Equipment supply contract,183759708,2012-08-24,Space,Telangana
+CON188,C188,Power Generation supply contract,86275123,2018-03-03,Railways,Delhi
+CON189,C189,Water Treatment supply contract,47964391,2021-12-05,Aviation,Kerala
+CON190,C190,Petrochemicals supply contract,32741587,2016-02-17,Power,Punjab
+CON191,C191,Pharmaceutical APIs supply contract,189883001,2024-11-12,Water Resources,Haryana
+CON192,C192,Telecom Equipment supply contract,14893723,2019-02-07,Finance,Assam
+CON193,C193,Financial Software supply contract,61541012,2015-09-12,Petroleum,Goa
+CON194,C194,Steel Products supply contract,146281919,2018-02-03,Steel,Himachal Pradesh
+CON195,C195,Defence Electronics supply contract,45178209,2022-08-24,Pharmaceuticals,Maharashtra
+CON196,C196,Aerospace Components supply contract,54436581,2017-08-19,Defence,Karnataka
+CON197,C197,Railway Equipment supply contract,129238682,2020-02-13,Space,Telangana
+CON198,C198,Power Generation supply contract,74201304,2017-09-30,Railways,Delhi
+CON199,C199,Water Treatment supply contract,128271965,2022-11-21,Aviation,Kerala
+CON200,C200,Petrochemicals supply contract,122383408,2018-03-10,Power,Punjab
+CON201,C201,Pharmaceutical APIs supply contract,24006908,2027-01-03,Water Resources,Haryana
+CON202,C202,Telecom Equipment supply contract,148488371,2023-04-10,Finance,Assam
+CON203,C203,Financial Software supply contract,147802076,2016-07-19,Petroleum,Goa
+CON204,C204,Steel Products supply contract,103841028,2024-08-08,Steel,Himachal Pradesh
+CON205,C205,Defence Electronics supply contract,73291194,2019-02-23,Pharmaceuticals,Maharashtra
+CON206,C206,Aerospace Components supply contract,36597423,2012-11-09,Defence,Karnataka
+CON207,C207,Railway Equipment supply contract,136823654,2016-09-08,Space,Telangana
+CON208,C208,Power Generation supply contract,11409606,2018-06-13,Railways,Delhi
+CON209,C209,Water Treatment supply contract,157318516,2023-08-06,Aviation,Kerala
+CON210,C210,Petrochemicals supply contract,42708416,2020-10-30,Power,Punjab
+CON211,C211,Pharmaceutical APIs supply contract,132705503,2026-08-05,Water Resources,Haryana
+CON212,C212,Telecom Equipment supply contract,179639112,2018-08-15,Finance,Assam
+CON213,C213,Financial Software supply contract,10419923,2020-08-31,Petroleum,Goa
+CON214,C214,Steel Products supply contract,188340813,2019-09-19,Steel,Himachal Pradesh
+CON215,C215,Defence Electronics supply contract,156050889,2017-01-11,Pharmaceuticals,Maharashtra
+CON216,C216,Aerospace Components supply contract,113852662,2011-09-02,Defence,Karnataka
+CON217,C217,Railway Equipment supply contract,102557215,2021-07-12,Space,Telangana
+CON218,C218,Power Generation supply contract,45811865,2023-01-15,Railways,Delhi
+CON219,C219,Water Treatment supply contract,57000128,2025-06-28,Aviation,Kerala
+CON220,C220,Petrochemicals supply contract,46199214,2021-05-16,Power,Punjab
+CON221,C221,Pharmaceutical APIs supply contract,63544775,2019-01-15,Water Resources,Haryana
+CON222,C222,Telecom Equipment supply contract,137077282,2017-08-10,Finance,Assam
+CON223,C223,Financial Software supply contract,22832296,2015-08-08,Petroleum,Goa
+CON224,C224,Steel Products supply contract,127293242,2023-10-07,Steel,Himachal Pradesh
+CON225,C225,Defence Electronics supply contract,143198539,2027-09-28,Pharmaceuticals,Maharashtra
+CON226,C226,Aerospace Components supply contract,123950760,2016-01-06,Defence,Karnataka
+CON227,C227,Railway Equipment supply contract,96224537,2020-06-06,Space,Telangana
+CON228,C228,Power Generation supply contract,171765011,2019-06-01,Railways,Delhi
+CON229,C229,Water Treatment supply contract,21369626,2019-10-26,Aviation,Kerala
+CON230,C230,Petrochemicals supply contract,25396939,2019-10-31,Power,Punjab
+CON231,C231,Pharmaceutical APIs supply contract,18359247,2021-05-26,Water Resources,Haryana
+CON232,C232,Telecom Equipment supply contract,183184591,2018-02-11,Finance,Assam
+CON233,C233,Financial Software supply contract,51188243,2015-07-14,Petroleum,Goa
+CON234,C234,Steel Products supply contract,164060954,2019-07-03,Steel,Himachal Pradesh
+CON235,C235,Defence Electronics supply contract,77004617,2020-05-15,Pharmaceuticals,Maharashtra
+CON236,C236,Aerospace Components supply contract,113881132,2019-07-08,Defence,Karnataka
+CON237,C237,Railway Equipment supply contract,67598308,2024-05-26,Space,Telangana
+CON238,C238,Power Generation supply contract,46434319,2018-03-27,Railways,Delhi
+CON239,C239,Water Treatment supply contract,189271878,2018-01-23,Aviation,Kerala
+CON240,C240,Petrochemicals supply contract,52279992,2019-12-17,Power,Punjab
+CON241,C241,Pharmaceutical APIs supply contract,63950256,2013-10-22,Water Resources,Haryana
+CON242,C242,Telecom Equipment supply contract,163619546,2016-07-02,Finance,Assam
+CON243,C243,Financial Software supply contract,27649123,2023-03-25,Petroleum,Goa
+CON244,C244,Steel Products supply contract,119906474,2020-06-13,Steel,Himachal Pradesh
+CON245,C245,Defence Electronics supply contract,130789108,2024-05-21,Pharmaceuticals,Maharashtra
+CON246,C246,Aerospace Components supply contract,58845357,2023-10-24,Defence,Karnataka
+CON247,C247,Railway Equipment supply contract,43329247,2023-01-22,Space,Telangana
+CON248,C248,Power Generation supply contract,70524219,2015-08-17,Railways,Delhi
+CON249,C249,Water Treatment supply contract,157865367,2016-08-06,Aviation,Kerala
+CON250,C250,Petrochemicals supply contract,35079496,2024-05-26,Power,Punjab
+CON251,C251,Pharmaceutical APIs supply contract,186827258,2013-03-10,Water Resources,Haryana
+CON252,C252,Telecom Equipment supply contract,31803094,2022-08-14,Finance,Assam
+CON253,C253,Financial Software supply contract,121826662,2026-08-19,Petroleum,Goa
+CON254,C254,Steel Products supply contract,182310675,2021-09-02,Steel,Himachal Pradesh
+CON255,C255,Defence Electronics supply contract,29588546,2019-04-07,Pharmaceuticals,Maharashtra
+CON256,C256,Aerospace Components supply contract,134672743,2017-04-09,Defence,Karnataka
+CON257,C257,Railway Equipment supply contract,102709702,2018-08-29,Space,Telangana
+CON258,C258,Power Generation supply contract,38503533,2018-02-23,Railways,Delhi
+CON259,C259,Water Treatment supply contract,76550218,2017-04-02,Aviation,Kerala
+CON260,C260,Petrochemicals supply contract,175189124,2025-04-10,Power,Punjab
+CON261,C261,Pharmaceutical APIs supply contract,93943772,2027-03-30,Water Resources,Haryana
+CON262,C262,Telecom Equipment supply contract,92823204,2020-08-23,Finance,Assam
+CON263,C263,Financial Software supply contract,74620103,2017-03-27,Petroleum,Goa
+CON264,C264,Steel Products supply contract,170395223,2020-03-04,Steel,Himachal Pradesh
+CON265,C265,Defence Electronics supply contract,125676292,2015-03-12,Pharmaceuticals,Maharashtra
+CON266,C266,Aerospace Components supply contract,108230560,2025-12-16,Defence,Karnataka
+CON267,C267,Railway Equipment supply contract,107314234,2021-08-19,Space,Telangana
+CON268,C268,Power Generation supply contract,157601139,2017-09-27,Railways,Delhi
+CON269,C269,Water Treatment supply contract,101022516,2017-01-12,Aviation,Kerala
+CON270,C270,Petrochemicals supply contract,146666534,2013-09-01,Power,Punjab
+CON271,C271,Pharmaceutical APIs supply contract,137169727,2019-05-03,Water Resources,Haryana
+CON272,C272,Telecom Equipment supply contract,47522173,2025-06-03,Finance,Assam
+CON273,C273,Financial Software supply contract,169376748,2024-03-23,Petroleum,Goa
+CON274,C274,Steel Products supply contract,14465949,2015-08-03,Steel,Himachal Pradesh
+CON275,C275,Defence Electronics supply contract,166686350,2027-04-23,Pharmaceuticals,Maharashtra
+CON276,C276,Aerospace Components supply contract,165283021,2014-07-21,Defence,Karnataka
+CON277,C277,Railway Equipment supply contract,55771483,2020-04-05,Space,Telangana
+CON278,C278,Power Generation supply contract,198044650,2016-04-19,Railways,Delhi
+CON279,C279,Water Treatment supply contract,50649519,2020-02-22,Aviation,Kerala
+CON280,C280,Petrochemicals supply contract,136595626,2021-03-28,Power,Punjab
+CON281,C281,Pharmaceutical APIs supply contract,160561896,2021-01-15,Water Resources,Haryana
+CON282,C282,Telecom Equipment supply contract,133389988,2018-06-29,Finance,Assam
+CON283,C283,Financial Software supply contract,196109874,2021-05-05,Petroleum,Goa
+CON284,C284,Steel Products supply contract,90127759,2017-05-14,Steel,Himachal Pradesh
