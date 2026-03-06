@@ -284,11 +284,31 @@ export default function Analytics() {
         { id: 'clusters', label: 'Clusters' },
     ];
 
+    const exportPDF = () => {
+        const title = document.title;
+        document.title = 'TenderTrace — Fraud Analytics Report — ' + new Date().toLocaleDateString('en-IN');
+        window.print();
+        document.title = title;
+    };
+
     return (
         <>
-            <div className="ph">
-                <h1 className="ph-title">Analytics &amp; Intelligence</h1>
-                <p className="ph-sub">Aggregate fraud intelligence across the full dataset — by flag type, geography, ministry, and time</p>
+            <div className="ph" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
+                <div>
+                    <h1 className="ph-title">Analytics &amp; Intelligence</h1>
+                    <p className="ph-sub">Aggregate fraud intelligence across the full dataset — by flag type, geography, ministry, and time</p>
+                </div>
+                <button onClick={exportPDF} style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #6366f1)',
+                    border: 'none', borderRadius: 10, padding: '0.65rem 1.4rem',
+                    color: 'white', fontWeight: 700, fontSize: '0.85rem',
+                    cursor: 'pointer', fontFamily: 'var(--font)',
+                    boxShadow: '0 4px 16px rgba(59,130,246,0.35)',
+                    display: 'flex', alignItems: 'center', gap: '0.5rem',
+                    whiteSpace: 'nowrap', alignSelf: 'flex-start',
+                }}>
+                    Export PDF
+                </button>
             </div>
 
             {/* Scan All */}
