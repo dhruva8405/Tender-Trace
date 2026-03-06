@@ -6,6 +6,7 @@ import GraphView from './pages/GraphView';
 import Analytics from './pages/Analytics';
 import Pipeline from './pages/Pipeline';
 import AgentChat from './pages/AgentChat';
+import IndiaMap from './pages/IndiaMap';
 
 export default function App() {
   const [page, setPage] = useState('dashboard');
@@ -17,6 +18,7 @@ export default function App() {
     { id: 'analytics', label: 'Analytics' },
     { id: 'graph', label: 'Cluster Graph' },
     { id: 'agent', label: 'AI Agent' },
+    { id: 'map', label: 'India Map' },
     { id: 'pipeline', label: 'How It Works' },
   ];
 
@@ -46,6 +48,7 @@ export default function App() {
         {page === 'analytics' && <Analytics />}
         {page === 'graph' && <GraphView />}
         {page === 'agent' && <AgentChat />}
+        {page === 'map' && <IndiaMap />}
         {page === 'pipeline' && <Pipeline />}
       </main>
 
