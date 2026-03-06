@@ -89,6 +89,15 @@ function Message({ msg }) {
     }
 
     if (msg.role === 'assistant') {
+        const speak = () => {
+            window.speechSynthesis.cancel();
+            const utt = new SpeechSynthesisUtterance(msg.content?.replace(/\*\*/g, '').replace(/\n/g, ' '));
+            utt.lang = 'en-IN';
+            utt.rate = 0.95;
+            window.speechSynthesis.speak(utt);
+        };
+        const stopSpeak = () => window.speechSynthesis.cancel();
+
         return (
             <div style={{ display: 'flex', gap: '0.75rem', marginBottom: '1rem' }}>
                 <div style={{
@@ -120,11 +129,25 @@ function Message({ msg }) {
                             whiteSpace: 'pre-wrap',
                         }}>
                             {msg.content}
+                            <div style={{ marginTop: '0.75rem', display: 'flex', gap: '0.5rem' }}>
+                                <button onClick={speak} style={{
+                                    background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.25)',
+                                    borderRadius: 6, padding: '0.25rem 0.65rem',
+                                    color: '#3b82f6', fontSize: '0.7rem', fontWeight: 600,
+                                    cursor: 'pointer', fontFamily: 'var(--font)',
+                                }}>Read Aloud</button>
+                                <button onClick={stopSpeak} style={{
+                                    background: 'rgba(100,116,139,0.1)', border: '1px solid rgba(100,116,139,0.2)',
+                                    borderRadius: 6, padding: '0.25rem 0.65rem',
+                                    color: 'var(--text-4)', fontSize: '0.7rem', fontWeight: 600,
+                                    cursor: 'pointer', fontFamily: 'var(--font)',
+                                }}>Stop</button>
+                            </div>
                         </div>
                     )}
                     {msg.error && (
                         <div style={{ padding: '0.75rem 1rem', background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.25)', borderRadius: 8, color: '#ef4444', fontSize: '0.8rem' }}>
-                            ⚠️ {msg.error}
+                            {msg.error}
                         </div>
                     )}
                 </div>
