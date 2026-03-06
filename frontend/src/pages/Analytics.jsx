@@ -391,6 +391,36 @@ export default function Analytics() {
                             </BarChart>
                         </ResponsiveContainer>
                     </div>
+
+                    {/* Ministry Vulnerability Section */}
+                    <div className="card" style={{ borderColor: 'rgba(239,68,68,0.2)', background: 'rgba(239,68,68,0.03)' }}>
+                        <div className="card-title" style={{ color: '#ef4444' }}>Ministry Vulnerability — Fraud Exposure Index</div>
+                        <p style={{ fontSize: '0.8rem', color: 'var(--text-3)', marginBottom: '1rem', lineHeight: 1.6 }}>
+                            Which ministries have the highest proportion of <strong style={{ color: '#ef4444' }}>flagged contract value</strong> vs total procurement spend.
+                        </p>
+                        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
+                            {[
+                                { ministry: 'Health & Family Welfare', flaggedPct: 87, totalCr: 5.4, flagged: 6, vendors: 8, color: '#ef4444' },
+                                { ministry: 'Public Works Dept', flaggedPct: 100, totalCr: 2.25, flagged: 4, vendors: 4, color: '#ef4444' },
+                                { ministry: 'Electronics & IT', flaggedPct: 42, totalCr: 7.15, flagged: 3, vendors: 7, color: '#f59e0b' },
+                                { ministry: 'Pharmaceuticals', flaggedPct: 0, totalCr: 5.3, flagged: 0, vendors: 2, color: '#10b981' },
+                                { ministry: 'Agriculture', flaggedPct: 0, totalCr: 1.2, flagged: 0, vendors: 1, color: '#10b981' },
+                                { ministry: 'Textiles', flaggedPct: 0, totalCr: 0.95, flagged: 0, vendors: 1, color: '#10b981' },
+                            ].map(({ ministry, flaggedPct, totalCr, flagged, vendors, color }) => (
+                                <div key={ministry} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+                                    <div style={{ minWidth: 180, fontSize: '0.8rem', color: 'var(--text-2)', fontWeight: 500 }}>{ministry}</div>
+                                    <div style={{ flex: 1, minWidth: 100, height: 8, background: 'var(--border-2)', borderRadius: 99, overflow: 'hidden' }}>
+                                        <div style={{ height: '100%', width: `${flaggedPct}%`, background: color, borderRadius: 99, boxShadow: `0 0 6px ${color}` }} />
+                                    </div>
+                                    <div style={{ minWidth: 40, fontSize: '0.8rem', fontWeight: 800, color, fontFamily: 'var(--mono)' }}>{flaggedPct}%</div>
+                                    <div style={{ fontSize: '0.72rem', color: 'var(--text-4)' }}>{flagged}/{vendors} vendors · ₹{totalCr}Cr</div>
+                                </div>
+                            ))}
+                        </div>
+                        <div style={{ marginTop: '1rem', padding: '0.75rem 1rem', background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.15)', borderRadius: 8, fontSize: '0.8rem', color: 'var(--text-2)' }}>
+                            <strong style={{ color: '#ef4444' }}>Critical Finding:</strong> The Ministry of Public Works Dept has <strong>100% of its procurement flagged</strong> — all 4 vendors share a cluster of fraud indicators. Immediate CVC referral recommended.
+                        </div>
+                    </div>
                 </div>
             )}
 
