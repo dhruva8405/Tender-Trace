@@ -5,6 +5,8 @@ import {
 } from 'recharts';
 import { DEMO_VENDORS, FLAG_META } from '../data';
 
+const API_BASE = import.meta.env.VITE_API_URL || 'https://tl2knu64ja.execute-api.ap-south-1.amazonaws.com/prod';
+
 // ─── Derived analytics (20 vendors, 3 clusters) ────────────────────
 const STATE_DATA = [
     { state: 'Uttar Pradesh', high: 6, medium: 0, low: 0, total: 32000000 },
@@ -109,7 +111,7 @@ function ScanAllSection() {
         }, 700);
 
         try {
-            const res = await fetch('https://tl2knu64ja.execute-api.ap-south-1.amazonaws.com/prod/investigate');
+            const res = await fetch(`${API_BASE}/investigate`);
             clearInterval(interval);
             if (!res.ok) throw new Error(`API returned ${res.status}`);
             const data = await res.json();
@@ -138,7 +140,7 @@ function ScanAllSection() {
         <div className="card" style={{ marginBottom: '1rem', borderColor: scanning ? 'rgba(59,130,246,0.3)' : done && !error ? 'rgba(16,185,129,0.3)' : error ? 'rgba(239,68,68,0.3)' : 'var(--border)' }}>
             <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1rem' }}>
                 <div>
-                    <div className="card-title">🤖 AI Investigation Agent — Full Dataset Scan</div>
+                    <div className="card-title">AI Investigation Agent — Full Dataset Scan</div>
                     <p style={{ fontSize: '0.82rem', color: 'var(--text-3)', margin: 0 }}>
                         Scans all vendors, runs 5 rules, detects clusters, generates Bedrock AI investigation brief — <strong>live from AWS</strong>
                     </p>
@@ -157,7 +159,7 @@ function ScanAllSection() {
                         transition: 'all 0.2s',
                     }}
                 >
-                    {scanning ? '⏳ Scanning AWS…' : done ? '✅ Scan Complete — Run Again' : '🚀 Run Live AI Scan'}
+                    {scanning ? 'Scanning AWS…' : done ? 'Scan Complete — Run Again' : 'Run Live AI Scan'}
                 </button>
             </div>
 
@@ -181,7 +183,7 @@ function ScanAllSection() {
 
             {error && (
                 <div style={{ marginTop: '1rem', padding: '0.75rem', background: 'rgba(239,68,68,0.08)', border: '1px solid rgba(239,68,68,0.2)', borderRadius: 8, color: '#ef4444', fontSize: '0.82rem' }}>
-                    ⚠️ {error} — Falling back to demo data. Check CORS and API Gateway configuration.
+                    API error: {error} — showing demo data below. Check CORS and API Gateway configuration.
                 </div>
             )}
 
