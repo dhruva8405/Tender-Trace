@@ -61,7 +61,7 @@ function AlertModal({ onClose }) {
                     </>
                 ) : (
                     <div style={{ textAlign: 'center', padding: '1rem 0' }}>
-                        <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>✅</div>
+                        <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem', color: '#10b981', fontWeight: 800 }}>✓</div>
                         <div style={{ fontWeight: 800, fontSize: '1rem', color: '#10b981', marginBottom: '0.5rem' }}>Subscribed!</div>
                         <p style={{ fontSize: '0.82rem', color: 'var(--text-3)', marginBottom: '1.25rem', lineHeight: 1.6 }}>
                             Alert confirmation sent to <strong style={{ color: 'var(--text-1)' }}>{email}</strong> via Amazon SNS. You'll receive notifications for all HIGH RISK detections.
