@@ -42,6 +42,60 @@ function FraudTicker() {
   );
 }
 
+const NOTIFS = [
+  { id: 1, level: 'HIGH', time: '2m ago', msg: 'C001 Kanpur MediTech won new ₹68L GeM contract — already flagged HIGH risk' },
+  { id: 2, level: 'HIGH', time: '14m ago', msg: 'New cluster detected: C004, C011, C019 share same registered agent in Delhi' },
+  { id: 3, level: 'MEDIUM', time: '1h ago', msg: 'Tip submitted for Ministry of Public Works — vendor C016 suspected bid rigging' },
+];
+
+function NotificationBell() {
+  const [open, setOpen] = useState(false);
+  const [read, setRead] = useState(false);
+  const unread = read ? 0 : NOTIFS.length;
+
+  useEffect(() => {
+    if (!open) return;
+    const h = (e) => { if (!e.target.closest('#notif-panel')) setOpen(false); };
+    document.addEventListener('mousedown', h);
+    return () => document.removeEventListener('mousedown', h);
+  }, [open]);
+
+  return (
+    <div style={{ position: 'relative' }} id="notif-panel">
+      <button onClick={() => { setOpen(o => !o); setRead(true); }} style={{
+        background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 7,
+        padding: '0.25rem 0.6rem', color: 'var(--text-3)', fontSize: '0.85rem',
+        cursor: 'pointer', position: 'relative', lineHeight: 1.4,
+      }}>
+        {unread > 0 && (
+          <span style={{ position: 'absolute', top: -4, right: -4, background: '#ef4444', color: 'white', borderRadius: 999, fontSize: '0.58rem', fontWeight: 900, minWidth: 15, height: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 3px' }}>{unread}</span>
+        )}
+        Alerts
+      </button>
+      {open && (
+        <div style={{ position: 'absolute', right: 0, top: 'calc(100% + 8px)', width: 320, background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 12, boxShadow: '0 12px 40px rgba(0,0,0,0.5)', zIndex: 999, overflow: 'hidden' }}>
+          <div style={{ padding: '0.65rem 1rem', borderBottom: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span style={{ fontWeight: 700, fontSize: '0.82rem', color: 'var(--text-1)' }}>Recent Alerts</span>
+            <span style={{ fontSize: '0.68rem', color: 'var(--text-4)' }}>via Amazon SNS</span>
+          </div>
+          {NOTIFS.map((n, i) => (
+            <div key={n.id} style={{ padding: '0.75rem 1rem', borderBottom: i < NOTIFS.length - 1 ? '1px solid var(--border)' : 'none', display: 'flex', gap: '0.65rem', alignItems: 'flex-start' }}>
+              <div style={{ width: 7, height: 7, borderRadius: '50%', background: n.level === 'HIGH' ? '#ef4444' : '#f59e0b', marginTop: 5, flexShrink: 0 }} />
+              <div style={{ flex: 1 }}>
+                <p style={{ fontSize: '0.78rem', color: 'var(--text-2)', margin: '0 0 0.2rem', lineHeight: 1.5 }}>{n.msg}</p>
+                <span style={{ fontSize: '0.65rem', color: 'var(--text-4)' }}>{n.time}</span>
+              </div>
+            </div>
+          ))}
+          <div style={{ padding: '0.5rem 1rem', background: 'rgba(15,23,42,0.5)', fontSize: '0.68rem', color: 'var(--text-4)', textAlign: 'center' }}>
+            Subscribe on Dashboard for real-time email alerts
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Sidebar items (secondary pages) ────────────────────────────────
 const SIDEBAR_ITEMS = [
   { id: 'graph', label: 'Cluster Graph', icon: '◈', desc: 'Visual fraud network' },
@@ -131,6 +185,7 @@ export default function App() {
 
         {/* Right controls */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
+          <NotificationBell />
           <button onClick={() => setCmdOpen(true)} style={{
             background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 7,
             padding: '0.25rem 0.6rem', color: 'var(--text-4)', fontSize: '0.7rem',
