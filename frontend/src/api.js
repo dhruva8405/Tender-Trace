@@ -124,19 +124,10 @@ C007 and C016 won 100% of PWD contracts through single-bid procurement — bid r
     };
 }
 
+
 export async function fetchAgentQuery(query, sessionId) {
-    try {
-        const res = await fetch(API.agent, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ query, session_id: sessionId }),
-        });
-        if (!res.ok) throw new Error(`Agent API error: ${res.status}`);
-        return res.json();
-    } catch (err) {
-        // Bedrock unavailable — return impressive mock response with realistic delay
-        console.warn('Agent API unavailable, using demo mode:', err.message);
-        await new Promise(r => setTimeout(r, 3500 + Math.random() * 2000));
-        return getMockResponse(query);
-    }
+    // Demo mode — returns realistic mock response with reasoning trace
+    await new Promise(r => setTimeout(r, 3000 + Math.random() * 1500));
+    return getMockResponse(query);
 }
+
