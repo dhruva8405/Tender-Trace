@@ -10,7 +10,7 @@ import 'reactflow/dist/style.css';
 const CLUSTERS = {
     kanpur: {
         id: 'kanpur',
-        name: '🏥 Kanpur Medical',
+        name: 'Kanpur Medical',
         subtitle: 'UP Health Ministry · 6 vendors · ₹32L at risk',
         threat: 'CRITICAL',
         avgScore: 80,
@@ -54,7 +54,7 @@ const CLUSTERS = {
 
     jaipur: {
         id: 'jaipur',
-        name: '🏗️ Jaipur Infra',
+        name: 'Jaipur Infra',
         subtitle: 'Rajasthan PWD · 4 vendors · ₹22.5L at risk',
         threat: 'CRITICAL',
         avgScore: 85,
@@ -97,7 +97,7 @@ const CLUSTERS = {
 
     chennai: {
         id: 'chennai',
-        name: '💻 Chennai IT',
+        name: 'Chennai IT',
         subtitle: 'TN e-Gov Ministry · 3 vendors · ₹8.5L at risk',
         threat: 'HIGH',
         avgScore: 83,
@@ -233,10 +233,10 @@ function ClusterGraph({ cluster }) {
 
             {/* Explanation */}
             <div className="card" style={{ borderColor: 'rgba(239,68,68,0.2)' }}>
-                <div className="card-title" style={{ marginBottom: '0.5rem' }}>🔎 AI Finding</div>
+                <div className="card-title" style={{ marginBottom: '0.5rem' }}>AI Finding</div>
                 <p style={{ fontSize: '0.875rem', color: 'var(--text-2)', lineHeight: 1.75, margin: 0 }}>{cluster.explanation}</p>
                 <div style={{ marginTop: '0.75rem', padding: '0.5rem 0.75rem', background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.15)', borderRadius: 8, fontSize: '0.78rem', color: '#ef4444', fontWeight: 600 }}>
-                    📂 Source: Amazon DynamoDB (tender-trace-companies, tender-trace-edges, tender-trace-directors, tender-trace-politicians)
+                    Source: Amazon DynamoDB (tender-trace-companies, tender-trace-edges, tender-trace-directors, tender-trace-politicians)
                 </div>
             </div>
         </div>
