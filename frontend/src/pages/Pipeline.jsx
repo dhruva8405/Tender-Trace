@@ -2,7 +2,7 @@
 
 const STEPS = [
     {
-        icon: '🗄️',
+        icon: 'DB',
         num: '01',
         title: 'Data Ingestion',
         subtitle: 'Collect from 3 government sources',
@@ -11,22 +11,22 @@ const STEPS = [
         points: ['MCA21 — company directors, paid-up capital, registration date', 'ECI affidavits — politicians and their family members', 'GeM portal — contract values, ministry, bid type'],
     },
     {
-        icon: '⚙️',
+        icon: 'AI',
         num: '02',
-        title: '5 Red Flag Rules',
+        title: 'Rules',
         subtitle: 'Automated rule engine scores every vendor',
         color: '#8b5cf6',
         desc: 'Each vendor is scored 0–100 using 5 rules that look for classic signs of fraudulent procurement. The rules are inspired by CAG audit patterns and CBI complaint filings.',
         points: [
-            '🔗  Shared Address — multiple companies at the same PIN code',
-            '👥  Director Overlap — one person controls many visible companies',
-            '🏛️  Political Link — director is a politician\'s family member (via ECI)',
-            '💸  Capital Mismatch — ₹2L capital winning ₹6 Cr contracts',
-            '🔒  Single Bid Win — contract won with no competition',
+            'Shared Address — multiple companies at the same PIN code',
+            'Director Overlap — one person controls many visible companies',
+            'Political Link — director is a politician\'s family member (via ECI)',
+            'Capital Mismatch — low capital winning high-value contracts',
+            'Single Bid Win — contract won with no competition',
         ],
     },
     {
-        icon: '🔍',
+        icon: 'CLU',
         num: '03',
         title: 'Cluster Detection',
         subtitle: 'Find networks, not just individuals',
@@ -35,7 +35,7 @@ const STEPS = [
         points: ['Kanpur Medical Syndicate — 4 vendors, 1 address, 1 director', 'Delhi IT Shell Network — registered within 47 days', 'Mumbai Infrastructure Ring — 100% single-bid PWD wins'],
     },
     {
-        icon: '🧠',
+        icon: 'GEN',
         num: '04',
         title: 'AI Investigation Brief',
         subtitle: 'Amazon Bedrock generates the narrative',
@@ -44,7 +44,7 @@ const STEPS = [
         points: ['Natural language fraud summary per vendor', 'Relevant IPC/PMLA sections cited automatically', 'Recommended action: Monitor / Freeze / Refer to CBI'],
     },
     {
-        icon: '📄',
+        icon: 'ACT',
         num: '05',
         title: 'Action & Export',
         subtitle: 'One-click CBI referral letter',
@@ -55,12 +55,12 @@ const STEPS = [
 ];
 
 const ARCH = [
-    { icon: '🌐', label: 'React Frontend', sub: 'Hosted on S3' },
-    { icon: '⚡', label: 'API Gateway', sub: 'REST API' },
+    { icon: 'S3', label: 'React Frontend', sub: 'Hosted on S3' },
+    { icon: 'GW', label: 'API Gateway', sub: 'REST API' },
     { icon: 'λ', label: 'Lambda', sub: 'Python 3.12' },
-    { icon: '🗃️', label: 'DynamoDB', sub: '20 vendors' },
-    { icon: '🧠', label: 'Bedrock', sub: 'Claude 3 Haiku' },
-    { icon: '📧', label: 'SNS', sub: 'Email alerts' },
+    { icon: 'DB', label: 'DynamoDB', sub: '20 vendors' },
+    { icon: 'AI', label: 'Bedrock', sub: 'Claude 3 Haiku' },
+    { icon: 'SNS', label: 'SNS', sub: 'Email alerts' },
 ];
 
 const WHY = [
@@ -182,7 +182,7 @@ export default function Pipeline() {
             {/* Who uses this */}
             <div style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.08), rgba(59,130,246,0.05))', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 12, padding: '1.5rem' }}>
                 <div style={{ fontWeight: 700, color: 'var(--text-1)', marginBottom: '0.75rem', fontSize: '0.95rem' }}>
-                    🎯 Who is this for?
+                    Who is this for?
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: '1rem' }}>
                     {[
