@@ -488,6 +488,44 @@ export default function VendorSearch({ preselected }) {
                         </div>
                     </div>
 
+                    {/* ── Risk Score Breakdown ──────────────────────── */}
+                    {result.flags?.length > 0 && (() => {
+                        const triggered = result.flags.map(f => ({ key: f, ...FLAG_META[f] })).filter(f => f.weight);
+                        const maxPossible = Object.values(FLAG_META).reduce((s, m) => s + (m.weight || 0), 0);
+                        return (
+                            <div className="card">
+                                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '1rem' }}>
+                                    <div className="card-title">Risk Score Breakdown</div>
+                                    <div style={{ fontFamily: 'var(--mono)', fontSize: '0.75rem', color: 'var(--text-4)' }}>
+                                        {result.score} / {maxPossible} pts possible
+                                    </div>
+                                </div>
+                                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.65rem' }}>
+                                    {triggered.map(f => {
+                                        const pct = Math.round((f.weight / maxPossible) * 100);
+                                        return (
+                                            <div key={f.key}>
+                                                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '0.3rem', fontSize: '0.78rem' }}>
+                                                    <span style={{ color: 'var(--text-2)', fontWeight: 600 }}>{f.label}</span>
+                                                    <span style={{ color: '#ef4444', fontFamily: 'var(--mono)', fontWeight: 700 }}>+{f.weight} pts ({pct}%)</span>
+                                                </div>
+                                                <div style={{ height: 7, background: 'var(--border-2)', borderRadius: 999, overflow: 'hidden' }}>
+                                                    <div style={{ height: '100%', width: `${pct}%`, background: 'linear-gradient(90deg, #ef4444, #f59e0b)', borderRadius: 999, transition: 'width 0.8s ease' }} />
+                                                </div>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                                <div style={{ marginTop: '1rem', paddingTop: '0.75rem', borderTop: '1px solid var(--border)', display: 'flex', justifyContent: 'space-between', fontSize: '0.78rem' }}>
+                                    <span style={{ color: 'var(--text-4)' }}>{triggered.length} flag{triggered.length !== 1 ? 's' : ''} triggered of {Object.keys(FLAG_META).length} rules</span>
+                                    <span style={{ fontWeight: 700, color: result.score >= 70 ? '#ef4444' : result.score >= 40 ? '#f59e0b' : '#10b981' }}>
+                                        {result.score >= 70 ? 'HIGH RISK' : result.score >= 40 ? 'MEDIUM RISK' : 'LOW RISK'} — {result.score}/100
+                                    </span>
+                                </div>
+                            </div>
+                        );
+                    })()}
+
                     {/* Bedrock narration */}
                     <div className="narration-card">
                         <div className="narration-header">
