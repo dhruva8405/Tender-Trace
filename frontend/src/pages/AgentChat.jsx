@@ -185,7 +185,7 @@ export default function AgentChat() {
     ]);
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
-    const [sessionId] = useState(() => crypto.randomUUID());
+    const [sessionId] = useState(() => (typeof crypto.randomUUID === 'function' ? crypto.randomUUID() : Math.random().toString(36).slice(2) + Date.now().toString(36)));
     const bottomRef = useRef(null);
 
     useEffect(() => {
