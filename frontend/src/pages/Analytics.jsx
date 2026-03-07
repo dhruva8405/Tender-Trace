@@ -208,7 +208,7 @@ function ScanAllSection() {
                     {brief && (
                         <div style={{ marginTop: '1rem', padding: '1rem', background: 'linear-gradient(135deg, rgba(99,102,241,0.08), rgba(59,130,246,0.05))', border: '1px solid rgba(99,102,241,0.2)', borderRadius: 10 }}>
                             <div style={{ fontSize: '0.72rem', color: '#818cf8', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.5rem' }}>
-                                🧠 AI Investigation Brief — Amazon Bedrock (Claude 3 Haiku)
+                                AI Investigation Brief — Amazon Bedrock (Claude 3 Haiku)
                             </div>
                             <p style={{ fontSize: '0.85rem', color: 'var(--text-2)', margin: 0, lineHeight: 1.7, whiteSpace: 'pre-wrap' }}>
                                 {brief}
@@ -220,12 +220,12 @@ function ScanAllSection() {
                     {clusters.length > 0 && (
                         <div style={{ marginTop: '1rem' }}>
                             <div style={{ fontSize: '0.72rem', color: 'var(--text-4)', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, marginBottom: '0.5rem' }}>
-                                🔗 Suspicious Clusters
+                                Suspicious Clusters
                             </div>
                             {clusters.map((c, i) => (
                                 <div key={i} style={{ padding: '0.75rem', background: 'rgba(239,68,68,0.06)', border: '1px solid rgba(239,68,68,0.15)', borderRadius: 8, marginBottom: '0.5rem' }}>
                                     <div style={{ fontWeight: 700, color: '#ef4444', fontSize: '0.85rem' }}>
-                                        {c.type === 'SHARED_ADDRESS' ? '📍' : '👥'} {c.vendor_count} vendors — {c.type.replace('_', ' ')}
+                                        {c.vendor_count} vendors — {c.type.replace(/_/g, ' ')}
                                     </div>
                                     <div style={{ fontSize: '0.78rem', color: 'var(--text-3)', margin: '0.3rem 0' }}>
                                         {c.address && `Address: ${c.address}`} · Avg Score: {c.avg_score} · Max: {c.max_score}
