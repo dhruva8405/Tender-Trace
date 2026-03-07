@@ -1,5 +1,6 @@
 ﻿import { useState, useEffect } from 'react';
 import { DEMO_VENDORS, FLAG_META, DEMO_NARRATIONS, fetchVendorRisk } from '../data';
+import { useWatchlist } from './Watchlist';
 
 const INR = (n) => '₹' + Number(n).toLocaleString('en-IN');
 const scoreColor = (s) => s >= 70 ? '#ef4444' : s >= 40 ? '#f59e0b' : '#10b981';
@@ -268,6 +269,7 @@ export default function VendorSearch({ preselected }) {
     const [suggestions, setSuggestions] = useState([]);
     const [vigilanceOpen, setVigilanceOpen] = useState(false);
     const [exportFlash, setExportFlash] = useState(false);
+    const { toggle: watchToggle, has: watchHas } = useWatchlist();
 
     useEffect(() => {
         if (preselected) {
@@ -430,6 +432,16 @@ export default function VendorSearch({ preselected }) {
                                 display: 'flex', alignItems: 'center', gap: '0.4rem', transition: 'all 0.2s',
                             }}>
                                 {exportFlash === 'link' ? 'Link Copied!' : 'Copy Share Link'}
+                            </button>
+                            <button onClick={() => { watchToggle(result.vendor_id); }} style={{
+                                background: watchHas(result.vendor_id) ? 'rgba(245,158,11,0.12)' : 'var(--bg-card-2)',
+                                border: `1px solid ${watchHas(result.vendor_id) ? 'rgba(245,158,11,0.35)' : 'var(--border-2)'}`,
+                                borderRadius: 10, padding: '0.65rem 1.25rem',
+                                color: watchHas(result.vendor_id) ? '#f59e0b' : 'var(--text-2)',
+                                fontWeight: 600, fontSize: '0.85rem', cursor: 'pointer', fontFamily: 'var(--font)',
+                                display: 'flex', alignItems: 'center', gap: '0.4rem', transition: 'all 0.2s',
+                            }}>
+                                {watchHas(result.vendor_id) ? 'On Watchlist' : 'Add to Watchlist'}
                             </button>
                             <button onClick={() => {
                                 const url = `mailto:vigilance@health.gov.in?subject=Tender Trace Alert: ${result.vendor_name}&body=Vendor ${result.vendor_id} has been flagged with score ${result.score}/100. Flags: ${result.flags?.join(', ')}. Please initiate investigation.`;
