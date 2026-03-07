@@ -192,10 +192,10 @@ function ScanAllSection() {
                     {/* Summary stats */}
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: '0.75rem', marginTop: '1rem' }}>
                         {[
-                            { label: 'Vendors Scanned', value: summary.total_vendors || 0, color: '#3b82f6' },
+                            { label: 'Vendors Scanned', value: summary.total || 0, color: '#3b82f6' },
                             { label: 'HIGH Risk', value: summary.high_risk || 0, color: '#ef4444' },
                             { label: 'MEDIUM Risk', value: summary.medium_risk || 0, color: '#f59e0b' },
-                            { label: 'Clusters Found', value: summary.clusters_detected || 0, color: '#ef4444' },
+                            { label: 'Flagged Value', value: summary.flagged_contract_value ? ('\u20b9' + (summary.flagged_contract_value / 10000000).toFixed(1) + ' Cr') : '\u20b90 Cr', color: '#ef4444' },
                         ].map(({ label, value, color }) => (
                             <div key={label} style={{ background: 'rgba(16,185,129,0.05)', border: '1px solid rgba(16,185,129,0.15)', borderRadius: 8, padding: '0.65rem 0.85rem', textAlign: 'center' }}>
                                 <div style={{ fontSize: '0.65rem', color: 'var(--text-4)', textTransform: 'uppercase', letterSpacing: '0.07em', marginBottom: '0.25rem' }}>{label}</div>
