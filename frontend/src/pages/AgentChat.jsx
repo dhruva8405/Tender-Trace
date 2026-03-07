@@ -179,7 +179,7 @@ export default function AgentChat() {
     const [messages, setMessages] = useState([
         {
             role: 'assistant',
-            content: `👋 **TenderTrace AI Agent** is ready.\n\nI can autonomously investigate procurement fraud across 284 vendors in 10 Indian states. I use Amazon Bedrock (Claude) + DynamoDB to reason through the evidence step-by-step — you'll see my full reasoning trace.\n\nTry one of the quick queries below, or ask me anything about the procurement data.`,
+            content: `**TenderTrace AI Agent** is ready.\n\nI can autonomously investigate procurement fraud across 284 vendors in 10 Indian states. I use Amazon Bedrock (Claude) + DynamoDB to reason through the evidence step-by-step — you'll see my full reasoning trace.\n\nTry one of the quick queries below, or ask me anything about the procurement data.`,
             trace_steps: [],
         }
     ]);
