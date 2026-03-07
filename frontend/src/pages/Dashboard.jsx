@@ -304,6 +304,52 @@ export default function Dashboard({ onSelectVendor }) {
                     </table>
                 </div>
             </div>
+
+            {/* ── TOP 10 DANGER BOARD ──────────────────────────────── */}
+            <div className="card" style={{ marginTop: '1rem' }}>
+                <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '1.25rem' }}>
+                    <div className="card-title">Top 10 Most Dangerous Vendors</div>
+                    <span style={{ fontSize: '0.7rem', fontFamily: 'var(--mono)', color: 'var(--text-4)' }}>ranked by risk score</span>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                    {[...DEMO_VENDORS].sort((a, b) => b.score - a.score).slice(0, 10).map((v, i) => (
+                        <div key={v.vendor_id} onClick={() => onSelectVendor(v)} style={{
+                            display: 'flex', alignItems: 'center', gap: '0.85rem',
+                            padding: '0.65rem 0.85rem', borderRadius: 10, cursor: 'pointer',
+                            background: i < 3 ? (i === 0 ? 'rgba(239,68,68,0.07)' : 'rgba(239,68,68,0.04)') : 'transparent',
+                            border: i < 3 ? '1px solid rgba(239,68,68,0.12)' : '1px solid transparent',
+                            transition: 'all 0.15s',
+                        }}
+                            onMouseEnter={e => e.currentTarget.style.background = 'rgba(59,130,246,0.06)'}
+                            onMouseLeave={e => e.currentTarget.style.background = i < 3 ? (i === 0 ? 'rgba(239,68,68,0.07)' : 'rgba(239,68,68,0.04)') : 'transparent'}
+                        >
+                            {/* Rank */}
+                            <div style={{ minWidth: 24, fontWeight: 900, fontSize: '0.78rem', color: i === 0 ? '#ef4444' : i === 1 ? '#f59e0b' : i === 2 ? '#f97316' : 'var(--text-4)', fontFamily: 'var(--mono)', textAlign: 'center' }}>
+                                #{i + 1}
+                            </div>
+                            {/* Score bubble */}
+                            <div style={{ width: 38, height: 38, borderRadius: 9, background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '0.88rem', color: '#ef4444', flexShrink: 0 }}>
+                                {v.score}
+                            </div>
+                            {/* Info */}
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                                <div style={{ fontWeight: 700, color: 'var(--text-1)', fontSize: '0.84rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{v.vendor_name}</div>
+                                <div style={{ fontSize: '0.68rem', color: 'var(--text-4)', marginTop: 1 }}>{v.vendor_id} · {v.state}</div>
+                            </div>
+                            {/* Top flag */}
+                            {v.flags[0] && (
+                                <span style={{ fontSize: '0.62rem', padding: '0.2rem 0.5rem', background: 'rgba(239,68,68,0.1)', color: '#ef4444', borderRadius: 4, fontWeight: 700, whiteSpace: 'nowrap', flexShrink: 0 }}>
+                                    {v.flags[0].replace('FLAG_', '').replace(/_/g, ' ')}
+                                </span>
+                            )}
+                            {/* Contract value */}
+                            <div style={{ fontFamily: 'var(--mono)', fontSize: '0.75rem', color: 'var(--text-3)', flexShrink: 0, minWidth: 55, textAlign: 'right' }}>
+                                {INR(v.contract_total)}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
         </>
     );
 }
