@@ -15,7 +15,6 @@ import AuditTrail from './pages/AuditTrail';
 import CommandPalette from './components/CommandPalette';
 import { DEMO_VENDORS } from './data';
 
-// ── Live Fraud Ticker ──────────────────────────────────────────────
 const TICKER_ITEMS = DEMO_VENDORS
   .filter(v => v.risk_level === 'HIGH' || v.flags.length > 1)
   .map(v => `${v.risk_level}: ${v.vendor_name} (${v.vendor_id}) — Score ${v.score}/100 — ${v.flags[0]?.replace('FLAG_', '') || 'FLAGGED'} — \u20b9${(v.contract_total / 100000).toFixed(1)}L at risk`);
@@ -24,27 +23,17 @@ function FraudTicker() {
   const ref = useRef(null);
   const items = [...TICKER_ITEMS, ...TICKER_ITEMS];
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
+    const el = ref.current; if (!el) return;
     let x = 0;
-    const speed = 0.5;
-    const animate = () => {
-      x -= speed;
-      if (Math.abs(x) >= el.scrollWidth / 2) x = 0;
-      el.style.transform = `translateX(${x}px)`;
-      requestAnimationFrame(animate);
-    };
+    const animate = () => { x -= 0.5; if (Math.abs(x) >= el.scrollWidth / 2) x = 0; el.style.transform = `translateX(${x}px)`; requestAnimationFrame(animate); };
     const id = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(id);
   }, []);
   return (
-    <div style={{
-      background: 'rgba(239,68,68,0.08)', borderBottom: '1px solid rgba(239,68,68,0.15)',
-      overflow: 'hidden', padding: '6px 0', whiteSpace: 'nowrap', userSelect: 'none',
-    }}>
+    <div style={{ background: 'rgba(239,68,68,0.08)', borderBottom: '1px solid rgba(239,68,68,0.15)', overflow: 'hidden', padding: '5px 0', whiteSpace: 'nowrap', userSelect: 'none' }}>
       <div ref={ref} style={{ display: 'inline-flex', gap: '4rem', willChange: 'transform' }}>
         {items.map((item, i) => (
-          <span key={i} style={{ fontSize: '0.72rem', color: '#ef4444', fontFamily: 'var(--mono)', letterSpacing: '0.02em' }}>
+          <span key={i} style={{ fontSize: '0.7rem', color: '#ef4444', fontFamily: 'var(--mono)' }}>
             <span style={{ color: '#f59e0b', fontWeight: 700, marginRight: '0.5rem' }}>ALERT</span>{item}
           </span>
         ))}
@@ -53,129 +42,176 @@ function FraudTicker() {
   );
 }
 
+// ── Sidebar items (secondary pages) ────────────────────────────────
+const SIDEBAR_ITEMS = [
+  { id: 'graph', label: 'Cluster Graph', icon: '◈', desc: 'Visual fraud network' },
+  { id: 'map', label: 'India Map', icon: '◉', desc: 'State heatmap' },
+  { id: 'watchlist', label: 'Watchlist', icon: '◎', desc: 'Saved vendors', badge: true },
+  { id: 'compare', label: 'Compare', icon: '⊞', desc: 'Side-by-side' },
+  { id: 'reports', label: 'Reports', icon: '◱', desc: 'Saved investigations' },
+  { id: 'tip', label: 'Submit Tip', icon: '◆', desc: 'Anonymous report' },
+  { id: 'audit', label: 'Audit Trail', icon: '▤', desc: 'Activity log' },
+  { id: 'pipeline', label: 'How It Works', icon: '◧', desc: 'Methodology' },
+];
+
+// ── Top nav items (primary pages) ────────────────────────────────
+const TOP_NAV = [
+  { id: 'dashboard', label: 'Dashboard' },
+  { id: 'search', label: 'Vendor Scan' },
+  { id: 'analytics', label: 'Analytics' },
+  { id: 'agent', label: 'AI Agent' },
+];
+
 export default function App() {
-  const [page, setPage] = useState(() => {
-    const p = new URLSearchParams(window.location.search).get('page');
-    return p || 'dashboard';
-  });
+  const [page, setPage] = useState(() => new URLSearchParams(window.location.search).get('page') || 'dashboard');
   const [selectedVendor, setSelectedVendor] = useState(() => {
     const vid = new URLSearchParams(window.location.search).get('vendor');
-    if (vid) return DEMO_VENDORS.find(v => v.vendor_id === vid) || null;
-    return null;
+    return vid ? DEMO_VENDORS.find(v => v.vendor_id === vid) || null : null;
   });
   const [theme, setTheme] = useState(() => localStorage.getItem('tt-theme') || 'dark');
   const [cmdOpen, setCmdOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const { count: watchCount } = useWatchlist();
 
+  useEffect(() => { document.body.classList.toggle('light', theme === 'light'); localStorage.setItem('tt-theme', theme); }, [theme]);
+  useEffect(() => { if (selectedVendor) setPage('search'); }, []);
   useEffect(() => {
-    document.body.classList.toggle('light', theme === 'light');
-    localStorage.setItem('tt-theme', theme);
-  }, [theme]);
-
-  useEffect(() => {
-    if (selectedVendor) setPage('search');
-  }, []);
-
-  // Ctrl+K to open command palette
-  useEffect(() => {
-    const handler = (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
-        e.preventDefault();
-        setCmdOpen(o => !o);
-      }
-    };
-    window.addEventListener('keydown', handler);
-    return () => window.removeEventListener('keydown', handler);
+    const h = (e) => { if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); setCmdOpen(o => !o); } };
+    window.addEventListener('keydown', h);
+    return () => window.removeEventListener('keydown', h);
   }, []);
 
   const navigate = (newPage, vendor = null) => {
-    setPage(newPage);
-    if (vendor) setSelectedVendor(vendor);
-    const params = new URLSearchParams();
-    params.set('page', newPage);
-    if (vendor) params.set('vendor', vendor.vendor_id);
-    window.history.pushState({}, '', `?${params.toString()}`);
+    setPage(newPage); if (vendor) setSelectedVendor(vendor);
+    const p = new URLSearchParams(); p.set('page', newPage);
+    if (vendor) p.set('vendor', vendor.vendor_id);
+    window.history.pushState({}, '', `?${p.toString()}`);
   };
 
-  const NAV = [
-    { id: 'dashboard', label: 'Dashboard' },
-    { id: 'search', label: 'Vendor Scan' },
-    { id: 'analytics', label: 'Analytics' },
-    { id: 'graph', label: 'Cluster Graph' },
-    { id: 'agent', label: 'AI Agent' },
-    { id: 'map', label: 'India Map' },
-    { id: 'watchlist', label: 'Watchlist', badge: watchCount > 0 ? watchCount : null },
-    { id: 'compare', label: 'Compare' },
-    { id: 'reports', label: 'Reports' },
-    { id: 'tip', label: 'Submit Tip' },
-    { id: 'audit', label: 'Audit Trail' },
-    { id: 'pipeline', label: 'How It Works' },
-  ];
+  const isSidebarPage = SIDEBAR_ITEMS.some(s => s.id === page);
 
   return (
-    <div className="app">
+    <div className="app" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <CommandPalette open={cmdOpen} onClose={() => setCmdOpen(false)} onNavigate={navigate} />
-      <nav className="navbar">
-        <div className="navbar-logo">
-          <span className="logo-icon">T</span>
-          <span>Tender<span className="logo-accent">Trace</span></span>
-          <div className="logo-dot" title="System active" />
+
+      {/* ── Top Navbar ─────────────────────────────────────────────── */}
+      <nav style={{
+        display: 'flex', alignItems: 'center', height: 52,
+        background: 'var(--bg-nav)', borderBottom: '1px solid var(--border)',
+        padding: '0 1.25rem', gap: '0.5rem', position: 'sticky', top: 0, zIndex: 100, flexShrink: 0,
+      }}>
+        {/* Sidebar toggle */}
+        <button onClick={() => setSidebarOpen(o => !o)} style={{
+          background: 'none', border: 'none', color: 'var(--text-4)', cursor: 'pointer',
+          fontSize: '1rem', padding: '0.3rem', lineHeight: 1, flexShrink: 0,
+        }} title="Toggle sidebar">
+          {sidebarOpen ? '◧' : '◨'}
+        </button>
+
+        {/* Logo */}
+        <div onClick={() => navigate('dashboard')} style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', marginRight: '1rem', flexShrink: 0 }}>
+          <div style={{ width: 26, height: 26, borderRadius: 8, background: 'linear-gradient(135deg, #3b82f6, #6366f1)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 900, fontSize: '0.8rem', color: 'white' }}>T</div>
+          <span style={{ fontWeight: 800, fontSize: '0.95rem', color: 'var(--text-1)' }}>Tender<span style={{ color: '#3b82f6' }}>Trace</span></span>
+          <div style={{ width: 6, height: 6, borderRadius: '50%', background: '#10b981', animation: 'pulse 2s infinite' }} />
         </div>
-        <div className="nav-center">
-          {NAV.map(({ id, label, badge }) => (
-            <button key={id} className={`nav-btn ${page === id ? 'active' : ''}`} onClick={() => navigate(id)} style={{ position: 'relative' }}>
-              {label}
-              {badge && (
-                <span style={{ position: 'absolute', top: -4, right: -4, background: '#ef4444', color: 'white', borderRadius: 999, fontSize: '0.6rem', fontWeight: 900, minWidth: 16, height: 16, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 4px' }}>
-                  {badge}
-                </span>
-              )}
-            </button>
+
+        {/* Primary nav */}
+        <div style={{ display: 'flex', gap: '0.25rem', flex: 1 }}>
+          {TOP_NAV.map(({ id, label }) => (
+            <button key={id} onClick={() => navigate(id)} style={{
+              background: page === id ? 'rgba(59,130,246,0.12)' : 'none',
+              border: page === id ? '1px solid rgba(59,130,246,0.3)' : '1px solid transparent',
+              borderRadius: 8, padding: '0.3rem 0.85rem',
+              color: page === id ? '#93c5fd' : 'var(--text-3)',
+              fontSize: '0.82rem', fontWeight: page === id ? 700 : 500,
+              cursor: 'pointer', fontFamily: 'var(--font)', transition: 'all 0.15s',
+            }}>{label}</button>
           ))}
         </div>
-        <div className="nav-right">
+
+        {/* Right controls */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
           <button onClick={() => setCmdOpen(true)} style={{
-            background: 'var(--bg-card)', border: '1px solid var(--border)',
-            borderRadius: 8, padding: '0.3rem 0.75rem',
-            color: 'var(--text-4)', fontSize: '0.72rem', cursor: 'pointer',
-            fontFamily: 'var(--mono)', display: 'flex', alignItems: 'center', gap: 6,
-          }} title="Open command palette (Ctrl+K)">
-            <span>Ctrl K</span>
-          </button>
+            background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 7,
+            padding: '0.25rem 0.6rem', color: 'var(--text-4)', fontSize: '0.7rem',
+            cursor: 'pointer', fontFamily: 'var(--mono)', letterSpacing: '0.04em',
+          }}>⌘K</button>
           <button onClick={() => setTheme(t => t === 'dark' ? 'light' : 'dark')} style={{
-            background: 'var(--bg-card)', border: '1px solid var(--border)',
-            borderRadius: 8, padding: '0.3rem 0.75rem',
-            color: 'var(--text-3)', fontSize: '0.78rem', cursor: 'pointer',
-            fontFamily: 'var(--font)', fontWeight: 600,
-          }} title="Toggle dark/light mode">
-            {theme === 'dark' ? 'Light' : 'Dark'}
-          </button>
-          <div className="live-pill" title="Connected: Lambda · DynamoDB · S3 · API Gateway"><div className="pulse" />Live · AWS</div>
+            background: 'var(--bg-card)', border: '1px solid var(--border)', borderRadius: 7,
+            padding: '0.25rem 0.65rem', color: 'var(--text-3)', fontSize: '0.75rem',
+            cursor: 'pointer', fontFamily: 'var(--font)', fontWeight: 600,
+          }}>{theme === 'dark' ? 'Light' : 'Dark'}</button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 5, background: 'rgba(16,185,129,0.06)', border: '1px solid rgba(16,185,129,0.2)', borderRadius: 999, padding: '0.2rem 0.65rem', fontSize: '0.7rem', color: '#34d399', fontWeight: 700 }}>
+            <div style={{ width: 5, height: 5, borderRadius: '50%', background: '#10b981' }} />
+            Live · AWS
+          </div>
         </div>
       </nav>
+
       <FraudTicker />
-      <main className="page">
-        {page === 'dashboard' && <Dashboard onSelectVendor={(v) => navigate('search', v)} />}
-        {page === 'search' && <VendorSearch preselected={selectedVendor} onNavigate={navigate} />}
-        {page === 'analytics' && <Analytics />}
-        {page === 'graph' && <GraphView />}
-        {page === 'agent' && <AgentChat />}
-        {page === 'map' && <IndiaMap />}
-        {page === 'watchlist' && <Watchlist onSelectVendor={(v) => navigate('search', v)} />}
-        {page === 'compare' && <Compare />}
-        {page === 'reports' && <SavedReports onSelectVendor={(v) => navigate('search', v)} />}
-        {page === 'tip' && <WhistleblowerTip />}
-        {page === 'audit' && <AuditTrail />}
-        {page === 'pipeline' && <Pipeline />}
-      </main>
-      <footer>
-        <span>Tender Trace &copy; 2026 &middot; Built on AWS &middot; AI ASCEND Hackathon</span>
-        <div className="footer-stack">
-          {['Amazon S3', 'AWS Lambda', 'Amazon DynamoDB', 'API Gateway', 'Amazon SNS', 'MCA21', 'MyNeta', 'GeM Portal'].map(t => (
-            <span key={t} className="footer-chip">{t}</span>
-          ))}
-        </div>
-      </footer>
+
+      {/* ── Body: Sidebar + Main ────────────────────────────────────── */}
+      <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
+
+        {/* Sidebar */}
+        {sidebarOpen && (
+          <aside style={{
+            width: 210, flexShrink: 0, background: 'var(--bg-sidebar, var(--bg-nav))',
+            borderRight: '1px solid var(--border)', padding: '1rem 0.75rem',
+            display: 'flex', flexDirection: 'column', gap: '0.25rem',
+            position: 'sticky', top: 82, height: 'calc(100vh - 82px)', overflowY: 'auto',
+          }}>
+            <div style={{ fontSize: '0.62rem', fontWeight: 800, color: 'var(--text-4)', letterSpacing: '0.1em', textTransform: 'uppercase', padding: '0 0.5rem', marginBottom: '0.4rem' }}>Tools</div>
+            {SIDEBAR_ITEMS.map(({ id, label, icon, desc, badge }) => (
+              <button key={id} onClick={() => navigate(id)} style={{
+                display: 'flex', alignItems: 'center', gap: 10, width: '100%',
+                background: page === id ? 'rgba(59,130,246,0.1)' : 'none',
+                border: page === id ? '1px solid rgba(59,130,246,0.25)' : '1px solid transparent',
+                borderRadius: 9, padding: '0.55rem 0.65rem', cursor: 'pointer',
+                fontFamily: 'var(--font)', textAlign: 'left', transition: 'all 0.15s',
+                position: 'relative',
+              }}
+                onMouseEnter={e => { if (page !== id) e.currentTarget.style.background = 'var(--hover, rgba(255,255,255,0.04))'; }}
+                onMouseLeave={e => { if (page !== id) e.currentTarget.style.background = 'none'; }}
+              >
+                <span style={{ fontSize: '0.9rem', opacity: 0.7, width: 18, textAlign: 'center', flexShrink: 0 }}>{icon}</span>
+                <div style={{ flex: 1, overflow: 'hidden' }}>
+                  <div style={{ fontSize: '0.8rem', fontWeight: page === id ? 700 : 500, color: page === id ? '#93c5fd' : 'var(--text-2)', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                    {label}
+                  </div>
+                  <div style={{ fontSize: '0.66rem', color: 'var(--text-4)', marginTop: 1 }}>{desc}</div>
+                </div>
+                {badge && watchCount > 0 && (
+                  <span style={{ background: '#ef4444', color: 'white', borderRadius: 999, fontSize: '0.58rem', fontWeight: 900, minWidth: 15, height: 15, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '0 3px', flexShrink: 0 }}>{watchCount}</span>
+                )}
+              </button>
+            ))}
+
+            <div style={{ marginTop: 'auto', paddingTop: '1rem', borderTop: '1px solid var(--border)', fontSize: '0.65rem', color: 'var(--text-4)', lineHeight: 1.6, padding: '0.75rem 0.5rem 0' }}>
+              <div style={{ fontWeight: 700, marginBottom: '0.25rem', color: 'var(--text-3)' }}>Stack</div>
+              {['S3', 'Lambda', 'DynamoDB', 'API Gateway', 'SNS'].map(s => (
+                <div key={s}>{s}</div>
+              ))}
+            </div>
+          </aside>
+        )}
+
+        {/* Main content */}
+        <main style={{ flex: 1, overflowY: 'auto', minWidth: 0 }}>
+          {page === 'dashboard' && <Dashboard onSelectVendor={(v) => navigate('search', v)} />}
+          {page === 'search' && <VendorSearch preselected={selectedVendor} onNavigate={navigate} />}
+          {page === 'analytics' && <Analytics />}
+          {page === 'agent' && <AgentChat />}
+          {page === 'graph' && <GraphView />}
+          {page === 'map' && <IndiaMap />}
+          {page === 'watchlist' && <Watchlist onSelectVendor={(v) => navigate('search', v)} />}
+          {page === 'compare' && <Compare />}
+          {page === 'reports' && <SavedReports onSelectVendor={(v) => navigate('search', v)} />}
+          {page === 'tip' && <WhistleblowerTip />}
+          {page === 'audit' && <AuditTrail />}
+          {page === 'pipeline' && <Pipeline />}
+        </main>
+      </div>
     </div>
   );
 }
