@@ -167,7 +167,7 @@ function ReportCard({ r, onSelect }) {
 
                     {/* Actions */}
                     <div style={{ display: 'flex', gap: '0.6rem', flexWrap: 'wrap' }}>
-                        <button onClick={() => onSelect && onSelect({ vendor_id: r.vendor_id })} style={{
+                        <button onClick={() => onSelect && onSelect(DEMO_VENDORS.find(v => v.vendor_id === r.vendor_id) || { vendor_id: r.vendor_id })} style={{
                             background: 'rgba(59,130,246,0.1)', border: '1px solid rgba(59,130,246,0.25)',
                             color: '#93c5fd', borderRadius: 8, padding: '0.45rem 1rem',
                             fontSize: '0.78rem', fontWeight: 700, cursor: 'pointer', fontFamily: 'var(--font)',
