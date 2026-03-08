@@ -12,6 +12,7 @@ import Compare from './pages/Compare';
 import SavedReports from './pages/SavedReports';
 import WhistleblowerTip from './pages/WhistleblowerTip';
 import AuditTrail from './pages/AuditTrail';
+import Tenders from './pages/Tenders';
 import CommandPalette from './components/CommandPalette';
 import { DEMO_VENDORS } from './data';
 
@@ -98,14 +99,15 @@ function NotificationBell() {
 
 // ── Sidebar items (secondary pages) ────────────────────────────────
 const SIDEBAR_ITEMS = [
-  { id: 'graph', label: 'Cluster Graph', icon: '◈', desc: 'Visual fraud network' },
-  { id: 'map', label: 'India Map', icon: '◉', desc: 'State heatmap' },
-  { id: 'watchlist', label: 'Watchlist', icon: '◎', desc: 'Saved vendors', badge: true },
-  { id: 'compare', label: 'Compare', icon: '⊞', desc: 'Side-by-side' },
-  { id: 'reports', label: 'Reports', icon: '◱', desc: 'Saved investigations' },
-  { id: 'tip', label: 'Submit Tip', icon: '◆', desc: 'Anonymous report' },
-  { id: 'audit', label: 'Audit Trail', icon: '▤', desc: 'Activity log' },
-  { id: 'pipeline', label: 'How It Works', icon: '◧', desc: 'Methodology' },
+  { id: 'tenders', label: 'Tenders', icon: '\u25c8', desc: 'Sanctioned / Ongoing / Pending / Upcoming' },
+  { id: 'graph', label: 'Cluster Graph', icon: '\u25c9', desc: 'Visual fraud network' },
+  { id: 'map', label: 'India Map', icon: '\u25ce', desc: 'State heatmap' },
+  { id: 'watchlist', label: 'Watchlist', icon: '\u229e', desc: 'Saved vendors', badge: true },
+  { id: 'compare', label: 'Compare', icon: '\u25f1', desc: 'Side-by-side' },
+  { id: 'reports', label: 'Reports', icon: '\u25c6', desc: 'Saved investigations' },
+  { id: 'tip', label: 'Submit Tip', icon: '\u25a4', desc: 'Anonymous report' },
+  { id: 'audit', label: 'Audit Trail', icon: '\u25e7', desc: 'Activity log' },
+  { id: 'pipeline', label: 'How It Works', icon: '\u25a3', desc: 'Methodology' },
 ];
 
 // ── Top nav items (primary pages) ────────────────────────────────
@@ -257,6 +259,7 @@ export default function App() {
           {page === 'search' && <VendorSearch preselected={selectedVendor} onNavigate={navigate} />}
           {page === 'analytics' && <Analytics />}
           {page === 'agent' && <AgentChat />}
+          {page === 'tenders' && <Tenders onSelectVendor={(v) => navigate('search', v)} />}
           {page === 'graph' && <GraphView />}
           {page === 'map' && <IndiaMap />}
           {page === 'watchlist' && <Watchlist onSelectVendor={(v) => navigate('search', v)} />}
