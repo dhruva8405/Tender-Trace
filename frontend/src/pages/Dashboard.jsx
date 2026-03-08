@@ -143,7 +143,7 @@ export default function Dashboard({ onSelectVendor }) {
                     </div>
                     <h1 className="hero-title">
                         Cross-referencing <span className="hl">3 open databases</span><br />
-                        to catch fraud before it disappears.
+                        across 40 vendors &amp; 25 tenders to catch fraud.
                     </h1>
                     <p className="hero-sub">
                         Tender Trace maps company registrations, director networks, and politician
@@ -168,7 +168,7 @@ export default function Dashboard({ onSelectVendor }) {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: 1 }}>
                     <div style={{ width: 8, height: 8, borderRadius: '50%', background: '#ef4444', boxShadow: '0 0 8px #ef4444', animation: 'pulse 1.5s infinite' }} />
                     <span style={{ fontSize: '0.85rem', color: 'var(--text-2)', fontWeight: 600 }}>
-                        Live scan detected <strong style={{ color: '#ef4444' }}>₹{(totalRisk / 10000000).toFixed(1)} Cr</strong> in high-risk procurement across <strong style={{ color: '#f59e0b' }}>{high.length} vendors</strong> — real-time alerts powered by Amazon SNS
+                        Live scan: <strong style={{ color: '#ef4444' }}>₹{(totalRisk / 10000000).toFixed(1)} Cr</strong> at risk across <strong style={{ color: '#f59e0b' }}>{high.length} HIGH-risk vendors</strong> in 6 fraud clusters &mdash; Amazon SNS alerts active
                     </span>
                 </div>
                 <button onClick={() => setShowModal(true)} style={{
