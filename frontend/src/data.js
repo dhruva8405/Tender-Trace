@@ -1,6 +1,4 @@
-﻿// ── DEMO DATA — synced with DynamoDB (20 vendors, 3 fraud clusters) ──
-// The frontend reads from this for VendorSearch + Dashboard display.
-// The Analytics page "Run Live AI Scan" calls the real API Gateway instead.
+﻿// ── DEMO DATA — synced with DynamoDB (40 vendors, 3 fraud clusters) ──
 export const API_URL = import.meta.env.VITE_API_URL || null;
 
 export const DEMO_VENDORS = [
@@ -53,7 +51,7 @@ export const DEMO_VENDORS = [
         registration_date: '2022-08-30', paid_up_capital: 450000, contract_total: 2700000,
         state: 'Uttar Pradesh', ministry: 'Health & Family Welfare',
     },
-    // ── CLUSTER 2: Jaipur Infra (Rajasthan PWD) ──────────────────────────
+    // ── CLUSTER 2: Jaipur Infra (Rajasthan PWD) ────────────────────────
     {
         vendor_id: 'C009', vendor_name: 'Jaipur Infra Build Pvt Ltd',
         score: 92, risk_level: 'HIGH',
@@ -86,7 +84,7 @@ export const DEMO_VENDORS = [
         registration_date: '2022-07-20', paid_up_capital: 220000, contract_total: 3100000,
         state: 'Rajasthan', ministry: 'Public Works',
     },
-    // ── CLUSTER 3: Chennai IT (TN e-Gov) ─────────────────────────────────
+    // ── CLUSTER 3: Chennai IT (TN e-Gov) ───────────────────────────────
     {
         vendor_id: 'C014', vendor_name: 'TN Data Systems Pvt Ltd',
         score: 88, risk_level: 'HIGH',
@@ -111,7 +109,7 @@ export const DEMO_VENDORS = [
         registration_date: '2023-02-10', paid_up_capital: 160000, contract_total: 2500000,
         state: 'Tamil Nadu', ministry: 'Electronics & IT',
     },
-    // ── CLEAN VENDORS (control group) ────────────────────────────────────
+    // ── CLEAN VENDORS (control group) ──────────────────────────────────
     {
         vendor_id: 'C007', vendor_name: 'Delhi Pharma Distributors Ltd',
         score: 10, risk_level: 'LOW', flags: [],
@@ -160,6 +158,396 @@ export const DEMO_VENDORS = [
         address: 'Park Street, Kolkata WB 700016',
         registration_date: '2015-09-25', paid_up_capital: 12000000, contract_total: 9500000,
         state: 'West Bengal', ministry: 'Textiles',
+    },
+
+    // ── NEW VENDORS — CLUSTER 4: Lucknow Defence Cluster ──────────────
+    {
+        vendor_id: 'C021', vendor_name: 'LKO Defence Systems Pvt Ltd',
+        score: 88, risk_level: 'HIGH',
+        flags: ['FLAG_NEW_COMPANY', 'FLAG_SHARED_DIRECTOR', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH'],
+        address: '7-B Hazratganj, Lucknow UP 226001',
+        registration_date: '2023-03-12', paid_up_capital: 300000, contract_total: 9800000,
+        state: 'Uttar Pradesh', ministry: 'Defence',
+    },
+    {
+        vendor_id: 'C022', vendor_name: 'Awadh Armaments Ltd',
+        score: 84, risk_level: 'HIGH',
+        flags: ['FLAG_SHARED_DIRECTOR', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH', 'FLAG_CONTRACT_SPLITTING'],
+        address: '7-B Hazratganj, Lucknow UP 226001',
+        registration_date: '2023-03-28', paid_up_capital: 250000, contract_total: 7600000,
+        state: 'Uttar Pradesh', ministry: 'Defence',
+    },
+    {
+        vendor_id: 'C023', vendor_name: 'Gomti Ordnance Pvt Ltd',
+        score: 79, risk_level: 'HIGH',
+        flags: ['FLAG_SHARED_DIRECTOR', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH'],
+        address: '7-B Hazratganj, Lucknow UP 226001',
+        registration_date: '2023-04-10', paid_up_capital: 280000, contract_total: 5400000,
+        state: 'Uttar Pradesh', ministry: 'Defence',
+    },
+
+    // ── CLUSTER 5: Bhopal Education Procurement ────────────────────────
+    {
+        vendor_id: 'C024', vendor_name: 'MP EduTech Pvt Ltd',
+        score: 82, risk_level: 'HIGH',
+        flags: ['FLAG_NEW_COMPANY', 'FLAG_SHARED_ADDRESS', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH'],
+        address: '22-A Bhopal Nagar, Bhopal MP 462001',
+        registration_date: '2023-05-08', paid_up_capital: 200000, contract_total: 6200000,
+        state: 'Madhya Pradesh', ministry: 'Education',
+    },
+    {
+        vendor_id: 'C025', vendor_name: 'Vindhya Learning Systems Pvt Ltd',
+        score: 76, risk_level: 'HIGH',
+        flags: ['FLAG_SHARED_ADDRESS', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH', 'FLAG_CONTRACT_SPLITTING'],
+        address: '22-A Bhopal Nagar, Bhopal MP 462001',
+        registration_date: '2023-05-22', paid_up_capital: 175000, contract_total: 4800000,
+        state: 'Madhya Pradesh', ministry: 'Education',
+    },
+    {
+        vendor_id: 'C026', vendor_name: 'CentralIndia Books & Stationery Ltd',
+        score: 71, risk_level: 'HIGH',
+        flags: ['FLAG_SHARED_ADDRESS', 'FLAG_CAPITAL_MISMATCH', 'FLAG_CONTRACT_SPLITTING'],
+        address: '22-A Bhopal Nagar, Bhopal MP 462001',
+        registration_date: '2023-06-14', paid_up_capital: 220000, contract_total: 3900000,
+        state: 'Madhya Pradesh', ministry: 'Education',
+    },
+
+    // ── NEW CLUSTER 6: Patna Agriculture Fraud ─────────────────────────
+    {
+        vendor_id: 'C027', vendor_name: 'Bihar AgriChem Pvt Ltd',
+        score: 86, risk_level: 'HIGH',
+        flags: ['FLAG_NEW_COMPANY', 'FLAG_SHARED_ADDRESS', 'FLAG_SHARED_DIRECTOR', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH'],
+        address: '5-C Fraser Road, Patna BR 800001',
+        registration_date: '2023-02-01', paid_up_capital: 180000, contract_total: 8700000,
+        state: 'Bihar', ministry: 'Agriculture',
+    },
+    {
+        vendor_id: 'C028', vendor_name: 'Ganga Fertilizers Pvt Ltd',
+        score: 81, risk_level: 'HIGH',
+        flags: ['FLAG_SHARED_ADDRESS', 'FLAG_SHARED_DIRECTOR', 'FLAG_POLITICAL_LINK', 'FLAG_CAPITAL_MISMATCH'],
+        address: '5-C Fraser Road, Patna BR 800001',
+        registration_date: '2023-02-20', paid_up_capital: 200000, contract_total: 6900000,
+        state: 'Bihar', ministry: 'Agriculture',
+    },
+
+    // ── MEDIUM RISK VENDORS ─────────────────────────────────────────────
+    {
+        vendor_id: 'C029', vendor_name: 'Ahmedabad Steel Fab Pvt Ltd',
+        score: 55, risk_level: 'MEDIUM',
+        flags: ['FLAG_CAPITAL_MISMATCH', 'FLAG_CONTRACT_SPLITTING'],
+        address: 'GIDC Estate, Ahmedabad GJ 382421',
+        registration_date: '2021-08-19', paid_up_capital: 1200000, contract_total: 14000000,
+        state: 'Gujarat', ministry: 'Steel',
+    },
+    {
+        vendor_id: 'C030', vendor_name: 'Surat Garments Exports Pvt Ltd',
+        score: 48, risk_level: 'MEDIUM',
+        flags: ['FLAG_MINISTRY_LOCK', 'FLAG_CAPITAL_MISMATCH'],
+        address: 'Ring Road, Surat GJ 395002',
+        registration_date: '2020-05-11', paid_up_capital: 900000, contract_total: 11000000,
+        state: 'Gujarat', ministry: 'Textiles',
+    },
+    {
+        vendor_id: 'C031', vendor_name: 'Indore Logistics Pvt Ltd',
+        score: 52, risk_level: 'MEDIUM',
+        flags: ['FLAG_CONTRACT_SPLITTING', 'FLAG_CAPITAL_MISMATCH'],
+        address: 'AB Road, Indore MP 452001',
+        registration_date: '2021-03-30', paid_up_capital: 800000, contract_total: 9500000,
+        state: 'Madhya Pradesh', ministry: 'Transport',
+    },
+    {
+        vendor_id: 'C032', vendor_name: 'Nagpur Mining Supplies Ltd',
+        score: 44, risk_level: 'MEDIUM',
+        flags: ['FLAG_CAPITAL_MISMATCH'],
+        address: 'Wardha Road, Nagpur MH 440010',
+        registration_date: '2019-11-22', paid_up_capital: 2000000, contract_total: 16000000,
+        state: 'Maharashtra', ministry: 'Mines',
+    },
+    {
+        vendor_id: 'C033', vendor_name: 'Coimbatore Precision Tools Pvt Ltd',
+        score: 38, risk_level: 'MEDIUM',
+        flags: ['FLAG_MINISTRY_LOCK'],
+        address: 'Avinashi Road, Coimbatore TN 641014',
+        registration_date: '2018-07-15', paid_up_capital: 3500000, contract_total: 21000000,
+        state: 'Tamil Nadu', ministry: 'Defence',
+    },
+
+    // ── NEW CLEAN VENDORS ───────────────────────────────────────────────
+    {
+        vendor_id: 'C034', vendor_name: 'Vizag Ports Pvt Ltd',
+        score: 9, risk_level: 'LOW', flags: [],
+        address: 'Port Area, Visakhapatnam AP 530035',
+        registration_date: '2016-12-01', paid_up_capital: 18000000, contract_total: 52000000,
+        state: 'Andhra Pradesh', ministry: 'Ports',
+    },
+    {
+        vendor_id: 'C035', vendor_name: 'Chandigarh IT Services Ltd',
+        score: 11, risk_level: 'LOW', flags: [],
+        address: 'Phase 8-B, Mohali PB 160059',
+        registration_date: '2018-04-20', paid_up_capital: 6000000, contract_total: 19000000,
+        state: 'Punjab', ministry: 'Electronics & IT',
+    },
+    {
+        vendor_id: 'C036', vendor_name: 'Thiruvananthapuram Medical Supplies',
+        score: 7, risk_level: 'LOW', flags: [],
+        address: 'MG Road, Thiruvananthapuram KL 695001',
+        registration_date: '2015-06-10', paid_up_capital: 22000000, contract_total: 41000000,
+        state: 'Kerala', ministry: 'Health & Family Welfare',
+    },
+    {
+        vendor_id: 'C037', vendor_name: 'Bhubaneswar Infra Corp Ltd',
+        score: 14, risk_level: 'LOW', flags: [],
+        address: 'Janpath, Bhubaneswar OD 751001',
+        registration_date: '2017-02-28', paid_up_capital: 9000000, contract_total: 28000000,
+        state: 'Odisha', ministry: 'Public Works',
+    },
+    {
+        vendor_id: 'C038', vendor_name: 'Guwahati Agri Processors Ltd',
+        score: 10, risk_level: 'LOW', flags: [],
+        address: 'GS Road, Guwahati AS 781007',
+        registration_date: '2019-09-14', paid_up_capital: 4000000, contract_total: 11000000,
+        state: 'Assam', ministry: 'Agriculture',
+    },
+    {
+        vendor_id: 'C039', vendor_name: 'Dehradun Pharma Labs Pvt Ltd',
+        score: 6, risk_level: 'LOW', flags: [],
+        address: 'Rajpur Road, Dehradun UK 248001',
+        registration_date: '2016-08-05', paid_up_capital: 11000000, contract_total: 24000000,
+        state: 'Uttarakhand', ministry: 'Pharmaceuticals',
+    },
+    {
+        vendor_id: 'C040', vendor_name: 'Raipur Steel Works Ltd',
+        score: 13, risk_level: 'LOW', flags: [],
+        address: 'Telibandha, Raipur CG 492006',
+        registration_date: '2018-01-18', paid_up_capital: 7500000, contract_total: 17000000,
+        state: 'Chhattisgarh', ministry: 'Steel',
+    },
+];
+
+// ── TENDERS — Sanctioned / Ongoing / Pending / Upcoming ────────────────
+export const DEMO_TENDERS = [
+    // ----- SANCTIONED (approved, awarded) -----
+    {
+        tender_id: 'TND-2026-S001', status: 'SANCTIONED',
+        title: 'Supply of Surgical Equipment to UP Government Hospitals',
+        vendor_id: 'C002', vendor_name: 'UP Surgical Supplies Pvt Ltd',
+        ministry: 'Health & Family Welfare', state: 'Uttar Pradesh',
+        value: 5200000, sanctioned_date: '2026-01-15',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Tender awarded for supply of 2,800 units surgical equipment to 14 district hospitals in UP.',
+    },
+    {
+        tender_id: 'TND-2026-S002', status: 'SANCTIONED',
+        title: 'IT Infrastructure for Tamil Nadu e-Governance Portal',
+        vendor_id: 'C014', vendor_name: 'TN Data Systems Pvt Ltd',
+        ministry: 'Electronics & IT', state: 'Tamil Nadu',
+        value: 2800000, sanctioned_date: '2026-01-22',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Server and network infrastructure rollout for state e-governance services across 32 districts.',
+    },
+    {
+        tender_id: 'TND-2026-S003', status: 'SANCTIONED',
+        title: 'Construction of Rural Roads — Rajasthan Phase II',
+        vendor_id: 'C009', vendor_name: 'Jaipur Infra Build Pvt Ltd',
+        ministry: 'Public Works', state: 'Rajasthan',
+        value: 4500000, sanctioned_date: '2026-02-03',
+        flagged: true, risk_level: 'HIGH',
+        description: '188 km rural road construction across Sikar, Ajmer and Nagaur districts.',
+    },
+    {
+        tender_id: 'TND-2026-S004', status: 'SANCTIONED',
+        title: 'Medical Diagnostics Equipment — AIIMS Kanpur',
+        vendor_id: 'C001', vendor_name: 'Kanpur MediTech Pvt Ltd',
+        ministry: 'Health & Family Welfare', state: 'Uttar Pradesh',
+        value: 6800000, sanctioned_date: '2026-02-18',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Supply and installation of MRI, CT scan and pathology lab equipment.',
+    },
+    {
+        tender_id: 'TND-2026-S005', status: 'SANCTIONED',
+        title: 'Pharmaceutical Stockpile — National Health Mission',
+        vendor_id: 'C007', vendor_name: 'Delhi Pharma Distributors Ltd',
+        ministry: 'Pharmaceuticals', state: 'Delhi',
+        value: 15000000, sanctioned_date: '2026-02-25',
+        flagged: false, risk_level: 'LOW',
+        description: 'Annual supply of essential medicines for 6 Union Territory dispensaries.',
+    },
+    {
+        tender_id: 'TND-2026-S006', status: 'SANCTIONED',
+        title: 'Defence Communication Equipment — Lucknow',
+        vendor_id: 'C021', vendor_name: 'LKO Defence Systems Pvt Ltd',
+        ministry: 'Defence', state: 'Uttar Pradesh',
+        value: 9800000, sanctioned_date: '2026-03-01',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Field communication radios and encryption hardware for UP Armed Police.',
+    },
+    {
+        tender_id: 'TND-2026-S007', status: 'SANCTIONED',
+        title: 'School Tablet Distribution — MP EduTech',
+        vendor_id: 'C024', vendor_name: 'MP EduTech Pvt Ltd',
+        ministry: 'Education', state: 'Madhya Pradesh',
+        value: 6200000, sanctioned_date: '2026-03-04',
+        flagged: true, risk_level: 'HIGH',
+        description: '31,000 Android tablets for Class 9-12 students under Samagra Shiksha.',
+    },
+
+    // ----- ONGOING (active execution) -----
+    {
+        tender_id: 'TND-2026-O001', status: 'ONGOING',
+        title: 'Cloud Hosting Services — Karnataka KSDC',
+        vendor_id: 'C017', vendor_name: 'Bengaluru Cloud Infra Ltd',
+        ministry: 'Electronics & IT', state: 'Karnataka',
+        value: 45000000, start_date: '2025-07-01', end_date: '2026-09-30',
+        flagged: false, risk_level: 'LOW',
+        description: 'Multi-year cloud hosting and disaster recovery for 28 state government departments.',
+    },
+    {
+        tender_id: 'TND-2026-O002', status: 'ONGOING',
+        title: 'Rajasthan Highway Maintenance — Jaipur Ring Road',
+        vendor_id: 'C010', vendor_name: 'Rajasthan Roads Pvt Ltd',
+        ministry: 'Public Works', state: 'Rajasthan',
+        value: 8200000, start_date: '2025-11-15', end_date: '2026-05-15',
+        flagged: true, risk_level: 'HIGH',
+        description: '74 km highway resurfacing and drainage repair on NH-48 Jaipur bypass.',
+    },
+    {
+        tender_id: 'TND-2026-O003', status: 'ONGOING',
+        title: 'Biopharma Supply Chain — Hyderabad Bulk Drug Park',
+        vendor_id: 'C018', vendor_name: 'Hyderabad Pharma Exports Ltd',
+        ministry: 'Pharmaceuticals', state: 'Telangana',
+        value: 38000000, start_date: '2025-09-01', end_date: '2026-08-31',
+        flagged: false, risk_level: 'LOW',
+        description: 'API manufacturing and supply for 12 bulk drug park tenants.',
+    },
+    {
+        tender_id: 'TND-2026-O004', status: 'ONGOING',
+        title: 'Bihar Fertilizer Subsidy Distribution',
+        vendor_id: 'C027', vendor_name: 'Bihar AgriChem Pvt Ltd',
+        ministry: 'Agriculture', state: 'Bihar',
+        value: 8700000, start_date: '2026-01-01', end_date: '2026-06-30',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Subsidized fertilizer procurement and distribution across 28 Patna division blocks.',
+    },
+    {
+        tender_id: 'TND-2026-O005', status: 'ONGOING',
+        title: 'Visakhapatnam Port Modernisation Phase I',
+        vendor_id: 'C034', vendor_name: 'Vizag Ports Pvt Ltd',
+        ministry: 'Ports', state: 'Andhra Pradesh',
+        value: 52000000, start_date: '2025-06-01', end_date: '2026-12-31',
+        flagged: false, risk_level: 'LOW',
+        description: 'Container terminal automation and berth deepening at Vizag port.',
+    },
+    {
+        tender_id: 'TND-2026-O006', status: 'ONGOING',
+        title: 'UP Defence Ordnance Spare Parts Supply',
+        vendor_id: 'C022', vendor_name: 'Awadh Armaments Ltd',
+        ministry: 'Defence', state: 'Uttar Pradesh',
+        value: 7600000, start_date: '2026-01-10', end_date: '2026-07-10',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Ordnance factory spare parts and maintenance kits for 4 UP battalions.',
+    },
+
+    // ----- PENDING (submitted, under review) -----
+    {
+        tender_id: 'TND-2026-P001', status: 'PENDING',
+        title: 'Smart City CCTV Network — Bhopal Phase II',
+        vendor_id: 'C024', vendor_name: 'MP EduTech Pvt Ltd',
+        ministry: 'Education', state: 'Madhya Pradesh',
+        value: 4200000, submitted_date: '2026-02-28',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Installation of 2,400 AI-enabled CCTV cameras across Bhopal city.',
+    },
+    {
+        tender_id: 'TND-2026-P002', status: 'PENDING',
+        title: 'Desert Construction Road Widening — Barmer',
+        vendor_id: 'C011', vendor_name: 'Desert Construction Co Pvt Ltd',
+        ministry: 'Public Works', state: 'Rajasthan',
+        value: 6700000, submitted_date: '2026-03-01',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Road widening of 52 km on Barmer-Jodhpur corridor to 4-lane.',
+    },
+    {
+        tender_id: 'TND-2026-P003', status: 'PENDING',
+        title: 'Maharashtra Textile Machinery Upgrade',
+        vendor_id: 'C032', vendor_name: 'Nagpur Mining Supplies Ltd',
+        ministry: 'Mines', state: 'Maharashtra',
+        value: 16000000, submitted_date: '2026-03-03',
+        flagged: false, risk_level: 'MEDIUM',
+        description: 'Procurement of mining safety equipment and pneumatic machinery for coal block operators.',
+    },
+    {
+        tender_id: 'TND-2026-P004', status: 'PENDING',
+        title: 'Assam Agri Cold Chain Infrastructure',
+        vendor_id: 'C038', vendor_name: 'Guwahati Agri Processors Ltd',
+        ministry: 'Agriculture', state: 'Assam',
+        value: 11000000, submitted_date: '2026-03-05',
+        flagged: false, risk_level: 'LOW',
+        description: 'Construction of 18 cold storage facilities for perishable agri produce in NE India.',
+    },
+    {
+        tender_id: 'TND-2026-P005', status: 'PENDING',
+        title: 'Gomti Ordnance — Infantry Equipment Supply',
+        vendor_id: 'C023', vendor_name: 'Gomti Ordnance Pvt Ltd',
+        ministry: 'Defence', state: 'Uttar Pradesh',
+        value: 5400000, submitted_date: '2026-03-06',
+        flagged: true, risk_level: 'HIGH',
+        description: 'Infantry load carriage equipment and webbing gear for UP Police modernisation scheme.',
+    },
+    {
+        tender_id: 'TND-2026-P006', status: 'PENDING',
+        title: 'Punjab Digital Classrooms — Phase III',
+        vendor_id: 'C035', vendor_name: 'Chandigarh IT Services Ltd',
+        ministry: 'Electronics & IT', state: 'Punjab',
+        value: 19000000, submitted_date: '2026-03-07',
+        flagged: false, risk_level: 'LOW',
+        description: 'Smart board and broadband connectivity for 3,200 government schools in Punjab.',
+    },
+
+    // ----- UPCOMING (advertised, bids open) -----
+    {
+        tender_id: 'TND-2026-U001', status: 'UPCOMING',
+        title: 'National Maternal Health Equipment Procurement — Round 5',
+        vendor_id: null, vendor_name: null,
+        ministry: 'Health & Family Welfare', state: 'Pan India',
+        value: 32000000, bid_open_date: '2026-03-20', bid_close_date: '2026-04-15',
+        flagged: false, risk_level: null,
+        description: 'Open GeM tender for maternal healthcare devices — ultrasound, foetal monitors, delivery kits for 6 states.',
+    },
+    {
+        tender_id: 'TND-2026-U002', status: 'UPCOMING',
+        title: 'Solar Power Plant — Rajasthan State DISCOM',
+        vendor_id: null, vendor_name: null,
+        ministry: 'Public Works', state: 'Rajasthan',
+        value: 120000000, bid_open_date: '2026-03-25', bid_close_date: '2026-04-30',
+        flagged: false, risk_level: null,
+        description: '800 MW solar farm EPC contract — Jaisalmer solar zone. Open for all pre-qualified bidders.',
+    },
+    {
+        tender_id: 'TND-2026-U003', status: 'UPCOMING',
+        title: 'India Stack API Governance Platform',
+        vendor_id: null, vendor_name: null,
+        ministry: 'Electronics & IT', state: 'Delhi',
+        value: 44000000, bid_open_date: '2026-04-01', bid_close_date: '2026-04-28',
+        flagged: false, risk_level: null,
+        description: 'Development and maintenance of central API gateway for Aadhaar, DigiLocker, UPI integration.',
+    },
+    {
+        tender_id: 'TND-2026-U004', status: 'UPCOMING',
+        title: 'Agri Drone Fleet — PM Kisan Nidhi Scheme',
+        vendor_id: null, vendor_name: null,
+        ministry: 'Agriculture', state: 'Pan India',
+        value: 28000000, bid_open_date: '2026-04-05', bid_close_date: '2026-05-05',
+        flagged: false, risk_level: null,
+        description: '1,200 agricultural spray drones for distribution to FPOs across 8 states.',
+    },
+    {
+        tender_id: 'TND-2026-U005', status: 'UPCOMING',
+        title: 'Defence Canteen Smart POS System',
+        vendor_id: null, vendor_name: null,
+        ministry: 'Defence', state: 'Pan India',
+        value: 18000000, bid_open_date: '2026-04-10', bid_close_date: '2026-05-10',
+        flagged: false, risk_level: null,
+        description: 'Nationwide rollout of digital POS and inventory management for 14,000+ defence canteens.',
     },
 ];
 
@@ -222,10 +610,30 @@ export const DEMO_NARRATIONS = {
     C018: 'Hyderabad Pharma Exports Ltd — 2016 incorporation, ₹2Cr capital. NPPA contract worth ₹3.8Cr. No flags. Score: 5/100 — Clean.',
     C019: 'Pune Agri Supplies Pvt Ltd — 2020 incorporation, ₹30L capital vs ₹1.2Cr contract (4×). Below mismatch threshold. No political / director links. Score: 12/100 — Clean.',
     C020: 'Kolkata Textile Mills Ltd — 2015 incorporation, ₹1.2Cr capital, ₹95L contract (below 1× of capital). Established exporter with long track record. Score: 8/100 — Clean.',
+    C021: 'LKO Defence Systems Pvt Ltd — registered 12 March 2023, awarded first defence contract just 45 days later. Director Vikram Singh Chauhan is the son of BJP MLA Har Pratap Singh (Lucknow East). Capital ₹3L vs ₹98L contracts (32.7×). New vendor with immediate high-value defence contract — refer to Ministry of Defence vigilance unit. Score: 88/100.',
+    C022: 'Awadh Armaments Ltd — shares director Vikram Singh Chauhan with C021 (LKO Defence Systems). Part of the Lucknow Defence Cluster. Director political link confirmed. ₹2.5L capital vs ₹76L contracts (30.4×). Bid splitting: 3 contracts within 90 days. Score: 84/100.',
+    C023: 'Gomti Ordnance Pvt Ltd — third member of the Lucknow Defence cluster. Director overlap with C021 and C022. Capital ₹2.8L vs ₹54L contracts. Political link confirmed via Vikram Singh Chauhan → MLA Har Pratap Singh. Score: 79/100.',
+    C024: 'MP EduTech Pvt Ltd — registered 8 May 2023, first Samagra Shiksha contract awarded 22 June 2023 (45 days). Director Priya Saxena is the niece of Congress MLA Ramesh Saxena (Bhopal North). Shares registered office at Bhopal Nagar with two other vendors. Capital ₹2L vs ₹62L contracts (31×). Score: 82/100.',
+    C025: 'Vindhya Learning Systems Pvt Ltd — part of Bhopal Education Cluster. Director Priya Saxena confirmed political connection. ₹1.75L capital vs ₹48L contracts (27.4×). Bid splitting: 3 contracts in 75 days. Score: 76/100.',
+    C026: 'CentralIndia Books & Stationery Ltd — third member of Bhopal Education Procurement cluster. ₹2.2L capital vs ₹39L contracts (17.7×). Contract splitting pattern across Bhopal cluster. Score: 71/100.',
+    C027: 'Bihar AgriChem Pvt Ltd — registered 1 February 2023, first fertilizer contract 19 March 2023 (46 days). Director Santosh Kumar Yadav is the declared son of RJD MLA Dinesh Yadav (Patna Sahib). Shares Fraser Road office with Ganga Fertilizers. Capital ₹1.8L vs ₹87L contracts (48.3×). Score: 86/100 — Refer to Bihar Vigilance.',
+    C028: 'Ganga Fertilizers Pvt Ltd — shares address and director Santosh Kumar Yadav with Bihar AgriChem at 5-C Fraser Road, Patna. Political link RJD MLA applies. ₹2L capital vs ₹69L contracts (34.5×). Score: 81/100.',
+    C029: 'Ahmedabad Steel Fab Pvt Ltd — established 2021, moderate risk. Capital mismatch: ₹12L vs ₹1.4Cr contracts (11.7×). Bid splitting pattern: 5 contracts awarded over 3 months. No political links or director overlap. Score: 55/100 — Monitor for future bids.',
+    C030: 'Surat Garments Exports Pvt Ltd — 100% ministry lock in Textiles (9 consecutive contracts). Capital ₹9L vs ₹1.1Cr contracts (12.2×). No political links confirmed. Score: 48/100 — Review ministry lock.',
+    C031: 'Indore Logistics Pvt Ltd — bid splitting pattern detected (4 contracts in 60 days, each just below ₹25L threshold). Capital mismatch: ₹8L vs ₹95L contracts (11.9×). Score: 52/100.',
+    C032: 'Nagpur Mining Supplies Ltd — ₹20L capital vs ₹1.6Cr contracts (8×). Capital mismatch marginally above threshold. Established 2019, no director overlaps or political links. Score: 44/100.',
+    C033: 'Coimbatore Precision Tools Pvt Ltd — Ministry Capture in Defence (8 consecutive sole-source contracts). Established 2018, ₹35L capital. Tools produced meet IS certification. No political links. Score: 38/100 — Review sole-source pattern.',
+    C034: 'Vizag Ports Pvt Ltd — established 2016, ₹1.8Cr capital, ₹5.2Cr port modernisation contract. All procurement via public tender. No flags. Score: 9/100 — Clean.',
+    C035: 'Chandigarh IT Services Ltd — 2018 incorporation, ₹60L capital, ₹1.9Cr digital classrooms contract. State-empanelled vendor with audit trail. Score: 11/100 — Clean.',
+    C036: 'Thiruvananthapuram Medical Supplies — established 2015, ₹2.2Cr capital, ₹4.1Cr Kerala health contract. ISO-certified supplier. Score: 7/100 — Clean.',
+    C037: 'Bhubaneswar Infra Corp Ltd — 2017 incorporation, ₹90L capital, ₹2.8Cr Odisha PWD contract. L1 bidder in open tender. Score: 14/100 — Clean.',
+    C038: 'Guwahati Agri Processors Ltd — 2019, ₹40L capital, ₹1.1Cr cold chain contract. FSSAI-certified; contract under NEC (North East Council) scheme. Score: 10/100 — Clean.',
+    C039: 'Dehradun Pharma Labs Pvt Ltd — 2016, ₹1.1Cr capital, ₹2.4Cr AYUSH ministry contract. GMP-certified, WHO-listed. Score: 6/100 — Clean.',
+    C040: 'Raipur Steel Works Ltd — 2018, ₹75L capital, ₹1.7Cr steel procurement contract. Bureau of Energy Efficiency compliant. Score: 13/100 — Clean.',
     DEFAULT: 'This vendor has been flagged by Tender Trace based on cross-referencing MCA21 company registration data, MyNeta politician affidavit records, and government procurement contract data stored in Amazon DynamoDB. The flags detected indicate procurement patterns that warrant further scrutiny by the relevant vigilance authority.',
 };
 
-// ── VENDOR SEARCH (demo mode; Analytics uses live API) ─────────────
+// ── VENDOR SEARCH ───────────────────────────────────────────────────
 export async function fetchVendorRisk(vendorIdOrName) {
     if (API_URL) {
         const res = await fetch(`${API_URL}/vendor?id=${vendorIdOrName}`);
@@ -237,7 +645,7 @@ export async function fetchVendorRisk(vendorIdOrName) {
         v => v.vendor_id.toUpperCase() === q ||
             v.vendor_name.toLowerCase().includes(q.toLowerCase())
     );
-    if (!vendor) return { error: `No vendor found matching "${vendorIdOrName}" — try C001–C020` };
+    if (!vendor) return { error: `No vendor found matching "${vendorIdOrName}" — try C001–C040` };
     return {
         ...vendor,
         registration_date: vendor.registration_date,
